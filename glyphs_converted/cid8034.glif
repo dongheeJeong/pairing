@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid8034">
+  <advance height="-150" width="1000" />
+  <unicode hex="8208" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z1, hr01" type="line" x="296" y="309" />
+      <point name="'penPair':'z1'" type="line" x="296" y="365" />
+      <point name="'penPair':'z9, hr02" type="line" x="204" y="365" />
+      <point name="'penPair':'z10'" type="line" x="204" y="514" />
+      <point name="'penPair':'z2, hr03" type="line" x="296" y="514" />
+      <point name="'penPair':'z2'" type="line" x="296" y="570" />
+      <point name="'penPair':'z10, hr04" type="line" x="204" y="570" />
+      <point name="'penPair':'z3'" type="line" x="204" y="715" />
+      <point x="236" y="718" />
+      <point x="275" y="727" />
+      <point name="'penPair':'z3'" type="curve" x="313" y="738" />
+      <point name="'penPair':'z16'" type="line" x="297" y="793" />
+      <point x="238" y="778" />
+      <point x="194" y="770" />
+      <point name="'penPair':'z-1'" type="curve" x="140" y="766" />
+      <point name="'penPair':'z11'" type="line" x="140" y="159" />
+      <point name="'penPair':'z4'" type="line" x="79" y="159" />
+      <point name="'penPair':'z4'" type="line" x="79" y="104" />
+      <point name="'penPair':'z5'" type="line" x="913" y="104" />
+      <point name="'penPair':'z5'" type="line" x="913" y="159" />
+      <point name="'penPair':'z12'" type="line" x="853" y="159" />
+      <point name="'penPair':'z13, hr05" type="line" x="853" y="775" />
+      <point name="'penPair':'z6'" type="line" x="695" y="775" />
+      <point name="'penPair':'z6'" type="line" x="695" y="720" />
+      <point name="'penPair':'z13'" type="line" x="789" y="720" />
+      <point name="'penPair':'z14'" type="line" x="789" y="570" />
+      <point name="'penPair':'z7, hr06" type="line" x="704" y="570" />
+      <point name="'penPair':'z7'" type="line" x="704" y="514" />
+      <point name="'penPair':'z14, hr07" type="line" x="789" y="514" />
+      <point name="'penPair':'z15'" type="line" x="789" y="365" />
+      <point name="'penPair':'z8, hr08" type="line" x="704" y="365" />
+      <point name="'penPair':'z8'" type="line" x="704" y="309" />
+      <point name="'penPair':'z15, hr09" type="line" x="789" y="309" />
+      <point name="'penPair':'z12'" type="line" x="789" y="159" />
+      <point name="'penPair':'z17'" type="line" x="676" y="159" />
+      <point name="'penPair':'z18'" type="line" x="676" y="775" />
+      <point name="'penPair':'z-1'" type="line" x="325" y="775" />
+      <point name="'penPair':'z19'" type="line" x="325" y="159" />
+      <point name="'penPair':'z11'" type="line" x="204" y="159" />
+      <point name="'penPair':'z9'" type="line" x="204" y="309" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z16, hr10" type="line" x="387" y="720" />
+      <point name="'penPair':'z18'" type="line" x="615" y="720" />
+      <point name="'penPair':'z17'" type="line" x="615" y="159" />
+      <point name="'penPair':'z19'" type="line" x="387" y="159" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z20'" type="line" x="586" y="231" />
+      <point name="'penPair':'z21'" type="line" x="586" y="520" />
+      <point name="'penPair':'z22'" type="line" x="417" y="520" />
+      <point name="'penPair':'z23'" type="line" x="417" y="231" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z26'" type="line" x="338" y="86" />
+      <point x="251" y="9" />
+      <point x="186" y="-29" />
+      <point name="'penPair':'z27'" type="curve" x="42" y="-82" />
+      <point name="'penPair':'z27'" type="line" x="82" y="-134" />
+      <point x="220" y="-79" />
+      <point x="281" y="-43" />
+      <point name="'penPair':'z26'" type="curve" x="393" y="51" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z28'" type="line" x="951" y="-82" />
+      <point x="806" y="-29" />
+      <point x="741" y="9" />
+      <point name="'penPair':'z29'" type="curve" x="655" y="86" />
+      <point name="'penPair':'z29'" type="line" x="600" y="51" />
+      <point x="710" y="-42" />
+      <point x="774" y="-79" />
+      <point name="'penPair':'z28'" type="curve" x="911" y="-134" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z24'" type="line" x="474" y="469" />
+      <point name="'penPair':'z24'" type="line" x="529" y="469" />
+      <point name="'penPair':'z20'" type="line" x="529" y="283" />
+      <point name="'penPair':'z23'" type="line" x="474" y="283" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z21'" type="line" x="587" y="592" />
+      <point name="'penPair':'z25'" type="line" x="587" y="648" />
+      <point name="'penPair':'z25'" type="line" x="415" y="648" />
+      <point name="'penPair':'z22'" type="line" x="415" y="592" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.656</real>
+    <real>1</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr01">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="156" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="704" width="149" />
+    </hintset>
+    <hintset pointTag="hr02">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="64" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="704" width="149" />
+    </hintset>
+    <hintset pointTag="hr03">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="156" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="704" width="149" />
+    </hintset>
+    <hintset pointTag="hr04">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="793" width="-20" />
+      <vstem pos="140" width="64" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="704" width="149" />
+    </hintset>
+    <hintset pointTag="hr05">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="64" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="789" width="64" />
+    </hintset>
+    <hintset pointTag="hr06">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="64" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="704" width="149" />
+    </hintset>
+    <hintset pointTag="hr07">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="64" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="789" width="64" />
+    </hintset>
+    <hintset pointTag="hr08">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="64" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="704" width="149" />
+    </hintset>
+    <hintset pointTag="hr09">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="64" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="789" width="64" />
+    </hintset>
+    <hintset pointTag="hr10">
+      <hstem pos="-113" width="-21" />
+      <hstem pos="104" width="55" />
+      <hstem pos="309" width="56" />
+      <hstem pos="514" width="56" />
+      <hstem pos="592" width="56" />
+      <hstem pos="720" width="55" />
+      <vstem pos="140" width="156" />
+      <vstem pos="325" width="62" />
+      <vstem pos="417" width="57" />
+      <vstem pos="529" width="57" />
+      <vstem pos="615" width="61" />
+      <vstem pos="704" width="149" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid6684">
+  <advance height="-150" width="1000" />
+  <unicode hex="5207" />
+  <unicode hex="FA00" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z1, hr00" type="line" x="603" y="743" />
+      <point smooth="yes" name="'penPair':'z3'" type="line" x="603" y="653" />
+      <point x="603" y="254" />
+      <point x="557" y="76" />
+      <point name="'penPair':'z2'" type="curve" x="354" y="-95" />
+      <point name="'penPair':'z2'" type="line" x="409" y="-141" />
+      <point x="620" y="60" />
+      <point x="671" y="222" />
+      <point smooth="yes" name="'penPair':'z3'" type="curve" x="671" y="652" />
+      <point name="'penPair':'z1'" type="line" x="671" y="743" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z6'" type="line" x="830" y="716" />
+      <point x="828" y="266" />
+      <point x="822" y="126" />
+      <point smooth="yes" name="'penPair':'z7'" type="curve" x="798" y="20" />
+      <point x="784" y="-44" />
+      <point x="773" y="-57" />
+      <point smooth="yes" name="'penPair':'z8'" type="curve" x="713" y="-58" />
+      <point x="690" y="-58" />
+      <point x="637" y="-55" />
+      <point name="'penPair':'z4'" type="curve" x="594" y="-50" />
+      <point name="'penPair':'z4'" type="line" x="611" y="-114" />
+      <point x="651" y="-117" />
+      <point x="688" y="-118" />
+      <point smooth="yes" name="'penPair':'z8'" type="curve" x="723" y="-118" />
+      <point x="832" y="-118" />
+      <point x="860" y="-81" />
+      <point smooth="yes" name="'penPair':'z7'" type="curve" x="877" y="76" />
+      <point x="894" y="228" />
+      <point x="900" y="415" />
+      <point name="'penPair':'z6'" type="curve" x="900" y="775" />
+      <point name="'penPair':'z5'" type="line" x="446" y="775" />
+      <point name="'penPair':'z5'" type="line" x="446" y="716" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z9'" type="line" x="437" y="503" />
+      <point name="'penPair':'z9'" type="line" x="431" y="562" />
+      <point name="'penPair':'z10'" type="line" x="33" y="493" />
+      <point name="'penPair':'z10'" type="line" x="43" y="432" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z11'" type="line" x="219" y="790" />
+      <point name="'penPair':'z11'" type="line" x="152" y="790" />
+      <point smooth="yes" name="'penPair':'z13'" type="line" x="152" y="84" />
+      <point x="152" y="-10" />
+      <point x="170" y="-26" />
+      <point smooth="yes" name="'penPair':'z14'" type="curve" x="272" y="-26" />
+      <point x="360" y="-26" />
+      <point x="372" y="-18" />
+      <point smooth="yes" name="'penPair':'z15'" type="curve" x="394" y="55" />
+      <point x="407" y="99" />
+      <point x="416" y="143" />
+      <point name="'penPair':'z12'" type="curve" x="424" y="189" />
+      <point name="'penPair':'z12'" type="line" x="359" y="221" />
+      <point x="350" y="161" />
+      <point x="344" y="124" />
+      <point smooth="yes" name="'penPair':'z15'" type="curve" x="340" y="107" />
+      <point x="323" y="42" />
+      <point x="315" y="33" />
+      <point smooth="yes" name="'penPair':'z14'" type="curve" x="253" y="33" />
+      <point x="220" y="33" />
+      <point x="219" y="35" />
+      <point smooth="yes" name="'penPair':'z13'" type="curve" x="219" y="101" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-120" width="-21" />
+      <hstem pos="-118" width="60" />
+      <hstem pos="-26" width="59" />
+      <hstem pos="716" width="59" />
+      <hstem pos="790" width="-20" />
+      <vstem pos="152" width="67" />
+      <vstem pos="603" width="68" />
+      <vstem pos="830" width="70" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

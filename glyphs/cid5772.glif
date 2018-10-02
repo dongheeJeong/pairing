@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid5772">
+  <advance height="-150" width="1000" />
+  <unicode hex="2F17" />
+  <unicode hex="5341" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="538" y="-108" />
+      <point type="line" x="538" y="397" />
+      <point type="line" x="887" y="397" />
+      <point type="line" x="887" y="458" />
+      <point type="line" x="538" y="458" />
+      <point type="line" x="538" y="783" />
+      <point type="line" x="468" y="783" />
+      <point type="line" x="468" y="458" />
+      <point type="line" x="98" y="458" />
+      <point type="line" x="98" y="397" />
+      <point type="line" x="468" y="397" />
+      <point type="line" x="468" y="-108" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-87" width="-21" />
+      <hstem pos="397" width="61" />
+      <hstem pos="783" width="-20" />
+      <vstem pos="468" width="70" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

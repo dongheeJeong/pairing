@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid6070">
+  <advance height="-150" width="1000" />
+  <unicode hex="70CF" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="453" y="699" />
+      <point x="462" y="731" />
+      <point x="472" y="770" />
+      <point type="curve" x="480" y="803" />
+      <point type="line" x="411" y="816" />
+      <point x="402" y="777" />
+      <point x="393" y="738" />
+      <point type="curve" x="379" y="699" />
+    </contour>
+    <contour>
+      <point type="line" x="166" y="720" />
+      <point type="line" x="166" y="197" />
+      <point type="line" x="847" y="197" />
+      <point x="846" y="103" />
+      <point x="835" y="-2" />
+      <point smooth="yes" type="curve" x="828" y="-50" />
+      <point x="826" y="-63" />
+      <point x="818" y="-70" />
+      <point smooth="yes" type="curve" x="782" y="-70" />
+      <point x="770" y="-70" />
+      <point x="719" y="-66" />
+      <point type="curve" x="660" y="-60" />
+      <point type="line" x="681" y="-121" />
+      <point x="722" y="-125" />
+      <point x="766" y="-127" />
+      <point smooth="yes" type="curve" x="782" y="-127" />
+      <point x="864" y="-127" />
+      <point x="888" y="-114" />
+      <point smooth="yes" type="curve" x="896" y="-55" />
+      <point x="910" y="46" />
+      <point x="914" y="150" />
+      <point type="curve" x="914" y="256" />
+      <point type="line" x="237" y="256" />
+      <point type="line" x="237" y="337" />
+      <point type="line" x="931" y="337" />
+      <point type="line" x="931" y="396" />
+      <point type="line" x="237" y="396" />
+      <point type="line" x="237" y="477" />
+      <point type="line" x="808" y="477" />
+      <point type="line" x="808" y="720" />
+    </contour>
+    <contour>
+      <point type="line" x="237" y="661" />
+      <point type="line" x="736" y="661" />
+      <point type="line" x="736" y="536" />
+      <point type="line" x="237" y="536" />
+    </contour>
+    <contour>
+      <point type="line" x="150" y="120" />
+      <point x="125" y="46" />
+      <point x="107" y="5" />
+      <point type="curve" x="61" y="-65" />
+      <point type="line" x="124" y="-103" />
+      <point x="169" y="-27" />
+      <point x="189" y="25" />
+      <point type="curve" x="216" y="95" />
+    </contour>
+    <contour>
+      <point type="line" x="404" y="-51" />
+      <point x="390" y="8" />
+      <point x="373" y="65" />
+      <point type="curve" x="353" y="127" />
+      <point type="line" x="291" y="109" />
+      <point x="307" y="54" />
+      <point x="326" y="-15" />
+      <point type="curve" x="339" y="-75" />
+    </contour>
+    <contour>
+      <point type="line" x="588" y="-12" />
+      <point x="573" y="38" />
+      <point x="548" y="94" />
+      <point type="curve" x="523" y="145" />
+      <point type="line" x="465" y="120" />
+      <point x="485" y="76" />
+      <point x="510" y="17" />
+      <point type="curve" x="526" y="-43" />
+    </contour>
+    <contour>
+      <point type="line" x="758" y="5" />
+      <point x="741" y="57" />
+      <point x="721" y="111" />
+      <point type="curve" x="702" y="153" />
+      <point type="line" x="640" y="125" />
+      <point x="663" y="80" />
+      <point x="683" y="28" />
+      <point type="curve" x="698" y="-28" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.6</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-106" width="-21" />
+      <hstem pos="197" width="59" />
+      <hstem pos="337" width="59" />
+      <hstem pos="477" width="59" />
+      <hstem pos="661" width="59" />
+      <hstem pos="816" width="-20" />
+      <vstem pos="166" width="71" />
+      <vstem pos="736" width="72" />
+      <vstem pos="847" width="67" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid3588">
+  <advance height="-150" width="1000" />
+  <unicode hex="5DE8" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z1, hr00" type="line" x="903" y="-108" />
+      <point name="'penPair':'z1'" type="line" x="903" y="-48" />
+      <point name="'penPair':'z4'" type="line" x="195" y="-48" />
+      <point name="'penPair':'z5'" type="line" x="195" y="172" />
+      <point name="'penPair':'z6'" type="line" x="829" y="172" />
+      <point name="'penPair':'z7'" type="line" x="829" y="522" />
+      <point name="'penPair':'z8'" type="line" x="195" y="522" />
+      <point name="'penPair':'z3'" type="line" x="195" y="711" />
+      <point name="'penPair':'z2'" type="line" x="895" y="711" />
+      <point name="'penPair':'z2'" type="line" x="895" y="771" />
+      <point name="'penPair':'z3'" type="line" x="124" y="771" />
+      <point name="'penPair':'z4'" type="line" x="124" y="-108" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z7'" type="line" x="759" y="461" />
+      <point name="'penPair':'z6'" type="line" x="759" y="233" />
+      <point name="'penPair':'z5'" type="line" x="195" y="233" />
+      <point name="'penPair':'z8'" type="line" x="195" y="461" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-108" width="60" />
+      <hstem pos="172" width="61" />
+      <hstem pos="461" width="61" />
+      <hstem pos="711" width="60" />
+      <vstem pos="124" width="71" />
+      <vstem pos="759" width="70" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

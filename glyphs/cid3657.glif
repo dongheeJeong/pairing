@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid3657">
+  <advance height="-150" width="1000" />
+  <unicode hex="8B19" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="597" y="686" />
+      <point x="579" y="728" />
+      <point x="561" y="766" />
+      <point type="curve" x="537" y="812" />
+      <point type="line" x="478" y="786" />
+      <point x="499" y="747" />
+      <point x="521" y="703" />
+      <point type="curve" x="540" y="656" />
+    </contour>
+    <contour>
+      <point type="line" x="746" y="659" />
+      <point x="776" y="714" />
+      <point x="786" y="734" />
+      <point type="curve" x="811" y="794" />
+      <point type="line" x="748" y="814" />
+      <point x="728" y="759" />
+      <point x="705" y="712" />
+      <point type="curve" x="676" y="659" />
+    </contour>
+    <contour>
+      <point type="line" x="396" y="676" />
+      <point type="line" x="396" y="623" />
+      <point type="line" x="546" y="623" />
+      <point type="line" x="546" y="524" />
+      <point type="line" x="443" y="524" />
+      <point type="line" x="443" y="471" />
+      <point type="line" x="546" y="471" />
+      <point type="line" x="546" y="373" />
+      <point type="line" x="374" y="373" />
+      <point type="line" x="374" y="319" />
+      <point type="line" x="546" y="319" />
+      <point type="line" x="546" y="221" />
+      <point type="line" x="430" y="221" />
+      <point type="line" x="430" y="167" />
+      <point type="line" x="536" y="167" />
+      <point x="490" y="82" />
+      <point x="439" y="26" />
+      <point type="curve" x="369" y="-41" />
+      <point type="line" x="419" y="-85" />
+      <point x="472" y="-27" />
+      <point x="509" y="23" />
+      <point type="curve" x="546" y="81" />
+      <point type="line" x="546" y="-130" />
+      <point type="line" x="610" y="-130" />
+      <point type="line" x="610" y="167" />
+      <point type="line" x="677" y="167" />
+      <point type="line" x="677" y="-132" />
+      <point type="line" x="740" y="-132" />
+      <point type="line" x="740" y="87" />
+      <point x="777" y="26" />
+      <point x="813" y="-26" />
+      <point type="curve" x="868" y="-85" />
+      <point type="line" x="913" y="-36" />
+      <point x="842" y="31" />
+      <point x="794" y="96" />
+      <point type="curve" x="752" y="167" />
+      <point type="line" x="870" y="167" />
+      <point type="line" x="870" y="319" />
+      <point type="line" x="947" y="319" />
+      <point type="line" x="947" y="373" />
+      <point type="line" x="870" y="373" />
+      <point type="line" x="870" y="524" />
+      <point type="line" x="740" y="524" />
+      <point type="line" x="740" y="623" />
+      <point type="line" x="902" y="623" />
+      <point type="line" x="902" y="676" />
+    </contour>
+    <contour>
+      <point type="line" x="352" y="-111" />
+      <point type="line" x="352" y="194" />
+      <point type="line" x="99" y="194" />
+      <point type="line" x="99" y="-111" />
+    </contour>
+    <contour>
+      <point type="line" x="162" y="141" />
+      <point type="line" x="289" y="141" />
+      <point type="line" x="289" y="-57" />
+      <point type="line" x="162" y="-57" />
+    </contour>
+    <contour>
+      <point type="line" x="381" y="576" />
+      <point type="line" x="381" y="629" />
+      <point type="line" x="71" y="629" />
+      <point type="line" x="71" y="576" />
+    </contour>
+    <contour>
+      <point type="line" x="351" y="721" />
+      <point type="line" x="351" y="777" />
+      <point type="line" x="107" y="777" />
+      <point type="line" x="107" y="721" />
+    </contour>
+    <contour>
+      <point type="line" x="347" y="431" />
+      <point type="line" x="347" y="487" />
+      <point type="line" x="105" y="487" />
+      <point type="line" x="105" y="431" />
+    </contour>
+    <contour>
+      <point type="line" x="347" y="286" />
+      <point type="line" x="347" y="342" />
+      <point type="line" x="105" y="342" />
+      <point type="line" x="105" y="286" />
+    </contour>
+    <contour>
+      <point type="line" x="610" y="623" />
+      <point type="line" x="677" y="623" />
+      <point type="line" x="677" y="524" />
+      <point type="line" x="610" y="524" />
+    </contour>
+    <contour>
+      <point type="line" x="740" y="471" />
+      <point type="line" x="807" y="471" />
+      <point type="line" x="807" y="373" />
+      <point type="line" x="740" y="373" />
+    </contour>
+    <contour>
+      <point type="line" x="610" y="319" />
+      <point type="line" x="677" y="319" />
+      <point type="line" x="677" y="221" />
+      <point type="line" x="610" y="221" />
+    </contour>
+    <contour>
+      <point type="line" x="610" y="471" />
+      <point type="line" x="677" y="471" />
+      <point type="line" x="677" y="373" />
+      <point type="line" x="610" y="373" />
+    </contour>
+    <contour>
+      <point type="line" x="740" y="319" />
+      <point type="line" x="807" y="319" />
+      <point type="line" x="807" y="221" />
+      <point type="line" x="740" y="221" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.6</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-111" width="-21" />
+      <hstem pos="-111" width="54" />
+      <hstem pos="141" width="53" />
+      <hstem pos="167" width="54" />
+      <hstem pos="286" width="56" />
+      <hstem pos="319" width="54" />
+      <hstem pos="431" width="56" />
+      <hstem pos="471" width="53" />
+      <hstem pos="576" width="53" />
+      <hstem pos="623" width="53" />
+      <hstem pos="721" width="56" />
+      <hstem pos="814" width="-20" />
+      <vstem pos="99" width="63" />
+      <vstem pos="289" width="63" />
+      <vstem pos="546" width="64" />
+      <vstem pos="677" width="63" />
+      <vstem pos="807" width="63" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid8037">
+  <advance height="-150" width="1000" />
+  <unicode hex="559C" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z1, hr00" type="line" x="933" y="170" />
+      <point name="'penPair':'z1'" type="line" x="933" y="222" />
+      <point name="'penPair':'z2'" type="line" x="660" y="222" />
+      <point name="'penPair':'z2'" type="line" x="684" y="308" />
+      <point name="'penPair':'z5'" type="line" x="854" y="308" />
+      <point name="'penPair':'z6'" type="line" x="854" y="499" />
+      <point name="'penPair':'z7'" type="line" x="146" y="499" />
+      <point name="'penPair':'z8'" type="line" x="146" y="308" />
+      <point name="'penPair':'z3'" type="line" x="315" y="308" />
+      <point name="'penPair':'z3'" type="line" x="339" y="222" />
+      <point name="'penPair':'z4'" type="line" x="67" y="222" />
+      <point name="'penPair':'z4'" type="line" x="67" y="170" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z9'" type="line" x="854" y="-110" />
+      <point name="'penPair':'z10'" type="line" x="854" y="108" />
+      <point name="'penPair':'z11'" type="line" x="146" y="108" />
+      <point name="'penPair':'z12'" type="line" x="146" y="-110" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z13'" type="line" x="853" y="558" />
+      <point name="'penPair':'z13'" type="line" x="853" y="611" />
+      <point name="'penPair':'z18'" type="line" x="531" y="611" />
+      <point name="'penPair':'z19'" type="line" x="531" y="689" />
+      <point name="'penPair':'z14'" type="line" x="903" y="689" />
+      <point name="'penPair':'z14'" type="line" x="903" y="742" />
+      <point name="'penPair':'z19'" type="line" x="531" y="742" />
+      <point name="'penPair':'z15'" type="line" x="531" y="808" />
+      <point name="'penPair':'z15'" type="line" x="465" y="808" />
+      <point name="'penPair':'z20'" type="line" x="465" y="742" />
+      <point name="'penPair':'z16'" type="line" x="97" y="742" />
+      <point name="'penPair':'z16'" type="line" x="97" y="689" />
+      <point name="'penPair':'z20'" type="line" x="465" y="689" />
+      <point name="'penPair':'z18'" type="line" x="465" y="611" />
+      <point name="'penPair':'z17'" type="line" x="147" y="611" />
+      <point name="'penPair':'z17'" type="line" x="147" y="558" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z11'" type="line" x="212" y="54" />
+      <point name="'penPair':'z10'" type="line" x="787" y="54" />
+      <point name="'penPair':'z9'" type="line" x="787" y="-56" />
+      <point name="'penPair':'z12'" type="line" x="212" y="-56" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z7'" type="line" x="209" y="444" />
+      <point name="'penPair':'z6'" type="line" x="790" y="444" />
+      <point name="'penPair':'z5'" type="line" x="790" y="362" />
+      <point name="'penPair':'z8'" type="line" x="209" y="362" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z-1'" type="line" x="381" y="308" />
+      <point name="'penPair':'z-1'" type="line" x="619" y="308" />
+      <point name="'penPair':'z-1'" type="line" x="594" y="222" />
+      <point name="'penPair':'z-1'" type="line" x="404" y="222" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.656</real>
+    <real>1</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-110" width="54" />
+      <hstem pos="54" width="54" />
+      <hstem pos="170" width="52" />
+      <hstem pos="308" width="54" />
+      <hstem pos="444" width="55" />
+      <hstem pos="558" width="53" />
+      <hstem pos="689" width="53" />
+      <hstem pos="808" width="-20" />
+      <vstem pos="146" width="66" />
+      <vstem pos="465" width="66" />
+      <vstem pos="787" width="67" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,94 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFFER_SIZE	pair.h	10;"	d
+CFLAGS	Makefile	/^CFLAGS = -Wall -W -lm -g$/;"	m
+CHILD_NUM	pair.h	13;"	d
+CONTOUR_SIZE	pair.h	12;"	d
+Contour	pair.h	/^} Contour;$/;"	t	typeref:struct:contour
+Contour_t	pair.h	/^enum Contour_t { parent, child, alone };$/;"	g
+Glif	pair.h	/^} Glif;$/;"	t	typeref:struct:glif
+LINE_SIZE	pair.h	11;"	d
+Line	pair.h	/^} Line;$/;"	t	typeref:struct:line
+PEN_WIDTH_200	pair.c	7;"	d	file:
+PEN_WIDTH_85	pair.c	6;"	d	file:
+Point	pair.h	/^} Point;$/;"	t	typeref:struct:point
+Point_t	pair.h	/^enum Point_t { line, curve, etc, none };$/;"	g
+__PAIR_H__	pair.h	2;"	d
+a	pair.h	/^	double a;$/;"	m	struct:line
+alone	pair.h	/^enum Contour_t { parent, child, alone };$/;"	e	enum:Contour_t
+are_two_inner_points_in_contour	pair.c	/^bool are_two_inner_points_in_contour(Point *a, Point *b, Cotour *c)$/;"	f
+buf	parse.c	/^char buf[BUFFER_SIZE];$/;"	v
+child	pair.h	/^	struct contour **child;$/;"	m	struct:contour	typeref:struct:contour::contour
+child	pair.h	/^enum Contour_t { parent, child, alone };$/;"	e	enum:Contour_t
+contour	pair.h	/^typedef struct contour {$/;"	s
+contour_end	glif.c	/^const char *contour_end   = "<\/contour>";$/;"	v
+contour_start	glif.c	/^const char *contour_start = "<contour>";$/;"	v
+contour_t	pair.h	/^	enum Contour_t contour_t;$/;"	m	struct:contour	typeref:enum:contour::Contour_t
+contours	pair.h	/^	Contour **contours;$/;"	m	struct:glif
+count_contours_points	parse.c	/^int count_contours_points(char *buf, int *points_in_contours)$/;"	f
+curve	pair.h	/^enum Point_t { line, curve, etc, none };$/;"	e	enum:Point_t
+cwd_path	main.c	/^char cwd_path[256];$/;"	v
+detect_contour_type	parse.c	/^void detect_contour_type(Glif *g)$/;"	f
+distance_points	line.c	/^double distance_points(Point *a, Point *b)$/;"	f
+do_pairing	parse.c	/^void do_pairing(char *glif_name)$/;"	f
+etc	pair.h	/^enum Point_t { line, curve, etc, none };$/;"	e	enum:Point_t
+free_glif	parse.c	/^void free_glif(void)$/;"	f
+g	pair.h	/^Glif g;$/;"	v
+glif	pair.h	/^typedef struct glif {$/;"	s
+has_parent	pair.h	/^	bool has_parent;$/;"	m	struct:contour
+init_struct_contour	parse.c	/^void init_struct_contour(int num_of_contours, int *points_in_contours)$/;"	f
+init_struct_line	parse.c	/^void init_struct_line(void)$/;"	f
+init_struct_point	parse.c	/^void init_struct_point(char *buf)$/;"	f
+intercept_y	pair.h	/^	double intercept_y;$/;"	m	struct:line
+is_line_intersect_line	line.c	/^bool is_line_intersect_line(Line *a, Line *line)$/;"	f
+is_paired	pair.h	/^	bool is_paired;$/;"	m	struct:point
+is_point_in_contour	line.c	/^bool is_point_in_contour(int x, int y, Contour *c)$/;"	f
+is_points_in_a_contour	pair.c	/^bool is_points_in_a_contour(Point *a, Point *b, Contour *parent)$/;"	f
+is_smooth	pair.h	/^	bool is_smooth;	$/;"	m	struct:point
+is_valid	pair.c	/^bool is_valid(Contour *c, int p_ind, int p2_ind)$/;"	f
+is_verti_or_horiz	line.c	/^bool is_verti_or_horiz(Point *a, Point *b)$/;"	f
+left	glif.c	/^const char *left  = "l";$/;"	v
+line	pair.h	/^enum Point_t { line, curve, etc, none };$/;"	e	enum:Point_t
+line	pair.h	/^typedef struct line {$/;"	s
+lines	pair.h	/^	Line  **lines;$/;"	m	struct:contour
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+make_dir	main.c	/^void make_dir(void)$/;"	f
+make_line_by_line	glif.c	/^void make_line_by_line(char *buf, char **line_buf)$/;"	f
+make_line_from_point	line.c	/^Line * make_line_from_point(int x, int y)$/;"	f
+new_path	main.c	/^char new_path[256];$/;"	v
+none	pair.h	/^enum Point_t { line, curve, etc, none };$/;"	e	enum:Point_t
+num_of_childs	pair.h	/^	int num_of_childs;$/;"	m	struct:contour
+num_of_contours	pair.h	/^	int num_of_contours;$/;"	m	struct:glif
+num_of_paired_points	pair.h	/^	int num_of_paired_points;$/;"	m	struct:contour
+num_of_points	pair.h	/^	int num_of_points;$/;"	m	struct:contour
+output_glif_file	glif.c	/^void output_glif_file(char *buf, char *glif_name)$/;"	f
+pair_contour	pair.c	/^void pair_contour(Contour *c)$/;"	f
+pair_contour_type_alone	pair.c	/^void pair_contour_type_alone(Contour *c)$/;"	f
+pair_contour_type_parent	pair.c	/^void pair_contour_type_parent(Contour *c)$/;"	f
+pair_num	pair.h	/^	int pair_num;$/;"	m	struct:glif
+pair_num	pair.h	/^	int pair_num;$/;"	m	struct:point
+pair_points	pair.c	/^bool pair_points(Point *a, Point *b, int *pair_num)$/;"	f
+pair_points_force	pair.c	/^void pair_points_force(Point *a, Point *b, int *pair_num)$/;"	f
+parent	pair.h	/^	struct contour *parent;$/;"	m	struct:contour	typeref:struct:contour::contour
+parent	pair.h	/^enum Contour_t { parent, child, alone };$/;"	e	enum:Contour_t
+penpair_post	glif.c	/^const char *penpair_post  = "\\" ";$/;"	v
+penpair_pre	glif.c	/^const char *penpair_pre   = "penPair=\\"z";$/;"	v
+point	pair.h	/^typedef struct point {$/;"	s
+point_t	pair.h	/^	enum Point_t point_t;$/;"	m	struct:point	typeref:enum:point::Point_t
+points	pair.h	/^	Point **points;$/;"	m	struct:contour
+print_glif	parse.c	/^void print_glif(void)$/;"	f
+read_glif	parse.c	/^void read_glif(char *buf, char *glif_name)$/;"	f
+right	glif.c	/^const char *right = "r";$/;"	v
+runtime	main.c	/^void runtime(struct timeval *begin_t, struct timeval *end_t)$/;"	f
+strnstr	parse.c	/^char *strnstr(const char *haystack, const char *needle, size_t len)$/;"	f
+write_file	glif.c	/^void write_file(char *output_buf, char *glif_name)$/;"	f
+x	pair.h	/^	int x;$/;"	m	struct:point
+x1	pair.h	/^	int x1, y1;$/;"	m	struct:line
+x2	pair.h	/^	int x2, y2;$/;"	m	struct:line
+y	pair.h	/^	int y;$/;"	m	struct:point
+y1	pair.h	/^	int x1, y1;$/;"	m	struct:line
+y2	pair.h	/^	int x2, y2;$/;"	m	struct:line

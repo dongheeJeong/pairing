@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid6413">
+  <advance height="-150" width="1000" />
+  <unicode hex="2F06" />
+  <unicode hex="4E8C" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z1, hr00" type="line" x="863" y="607" />
+      <point name="'penPair':'z1'" type="line" x="863" y="668" />
+      <point name="'penPair':'z2'" type="line" x="136" y="668" />
+      <point name="'penPair':'z2'" type="line" x="136" y="607" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z3'" type="line" x="944" y="4" />
+      <point name="'penPair':'z3'" type="line" x="944" y="66" />
+      <point name="'penPair':'z4'" type="line" x="55" y="66" />
+      <point name="'penPair':'z4'" type="line" x="55" y="4" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="4" width="62" />
+      <hstem pos="607" width="61" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

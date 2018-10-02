@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid3894">
+  <advance height="-150" width="1000" />
+  <unicode hex="4E45" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="380" y="817" />
+      <point x="319" y="666" />
+      <point x="239" y="528" />
+      <point type="curve" x="102" y="386" />
+      <point type="line" x="151" y="335" />
+      <point x="288" y="485" />
+      <point x="376" y="627" />
+      <point type="curve" x="450" y="799" />
+    </contour>
+    <contour>
+      <point type="line" x="487" y="229" />
+      <point x="589" y="93" />
+      <point x="731" y="-22" />
+      <point type="curve" x="906" y="-136" />
+      <point type="line" x="956" y="-78" />
+      <point x="807" y="7" />
+      <point x="638" y="137" />
+      <point type="curve" x="533" y="282" />
+    </contour>
+    <contour>
+      <point type="line" x="691" y="649" />
+      <point type="line" x="341" y="649" />
+      <point type="line" x="301" y="587" />
+      <point type="line" x="643" y="587" />
+      <point x="549" y="340" />
+      <point x="372" y="103" />
+      <point type="curve" x="38" y="-88" />
+      <point type="line" x="90" y="-140" />
+      <point x="408" y="45" />
+      <point x="607" y="281" />
+      <point type="curve" x="730" y="611" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-119" width="-21" />
+      <hstem pos="587" width="62" />
+      <hstem pos="817" width="-20" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

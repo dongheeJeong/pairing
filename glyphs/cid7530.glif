@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid7530">
+  <advance height="-150" width="1000" />
+  <unicode hex="5E73" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="535" y="-131" />
+      <point type="line" x="535" y="221" />
+      <point type="line" x="943" y="221" />
+      <point type="line" x="943" y="284" />
+      <point type="line" x="535" y="284" />
+      <point type="line" x="535" y="715" />
+      <point type="line" x="895" y="715" />
+      <point type="line" x="895" y="772" />
+      <point type="line" x="106" y="772" />
+      <point type="line" x="106" y="715" />
+      <point type="line" x="466" y="715" />
+      <point type="line" x="466" y="284" />
+      <point type="line" x="56" y="284" />
+      <point type="line" x="56" y="221" />
+      <point type="line" x="466" y="221" />
+      <point type="line" x="466" y="-131" />
+    </contour>
+    <contour>
+      <point type="line" x="322" y="403" />
+      <point x="276" y="481" />
+      <point x="232" y="553" />
+      <point type="curve" x="181" y="629" />
+      <point type="line" x="122" y="593" />
+      <point x="172" y="519" />
+      <point x="218" y="442" />
+      <point type="curve" x="262" y="364" />
+    </contour>
+    <contour>
+      <point type="line" x="824" y="630" />
+      <point x="784" y="554" />
+      <point x="741" y="479" />
+      <point type="curve" x="684" y="405" />
+      <point type="line" x="741" y="366" />
+      <point x="803" y="453" />
+      <point x="832" y="507" />
+      <point type="curve" x="882" y="592" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.656</real>
+    <real>1</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-110" width="-21" />
+      <hstem pos="221" width="63" />
+      <hstem pos="715" width="57" />
+      <vstem pos="466" width="69" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

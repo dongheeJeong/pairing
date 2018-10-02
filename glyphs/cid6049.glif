@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid6049">
+  <advance height="-150" width="1000" />
+  <unicode hex="4E94" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="932" y="-110" />
+      <point type="line" x="932" y="-50" />
+      <point type="line" x="796" y="-50" />
+      <point type="line" x="796" y="403" />
+      <point type="line" x="438" y="403" />
+      <point type="line" x="467" y="712" />
+      <point type="line" x="867" y="712" />
+      <point type="line" x="867" y="772" />
+      <point type="line" x="131" y="772" />
+      <point type="line" x="131" y="712" />
+      <point type="line" x="397" y="712" />
+      <point type="line" x="368" y="403" />
+      <point type="line" x="163" y="403" />
+      <point type="line" x="163" y="344" />
+      <point type="line" x="363" y="344" />
+      <point type="line" x="325" y="-50" />
+      <point type="line" x="68" y="-50" />
+      <point type="line" x="68" y="-110" />
+    </contour>
+    <contour>
+      <point type="line" x="725" y="344" />
+      <point type="line" x="725" y="-50" />
+      <point type="line" x="395" y="-50" />
+      <point type="line" x="433" y="344" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-110" width="60" />
+      <hstem pos="344" width="59" />
+      <hstem pos="712" width="60" />
+      <vstem pos="344" width="70" />
+      <vstem pos="382" width="70" />
+      <vstem pos="725" width="71" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

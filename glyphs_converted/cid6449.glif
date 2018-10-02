@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid6449">
+  <advance height="-150" width="1000" />
+  <unicode hex="59FB" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z1, hr00" type="line" x="891" y="-125" />
+      <point name="'penPair':'z2'" type="line" x="891" y="772" />
+      <point name="'penPair':'z3'" type="line" x="397" y="772" />
+      <point name="'penPair':'z4'" type="line" x="397" y="-125" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z3'" type="line" x="460" y="716" />
+      <point name="'penPair':'z2'" type="line" x="829" y="716" />
+      <point name="'penPair':'z1'" type="line" x="829" y="-68" />
+      <point name="'penPair':'z4'" type="line" x="460" y="-68" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z12'" type="line" x="381" y="45" />
+      <point x="299" y="140" />
+      <point x="217" y="231" />
+      <point name="'penPair':'z14'" type="curve" x="150" y="290" />
+      <point x="199" y="471" />
+      <point x="224" y="608" />
+      <point name="'penPair':'z13'" type="curve" x="247" y="804" />
+      <point name="'penPair':'z13'" type="line" x="187" y="811" />
+      <point x="159" y="614" />
+      <point x="133" y="452" />
+      <point name="'penPair':'z14'" type="curve" x="82" y="273" />
+      <point x="179" y="188" />
+      <point x="262" y="91" />
+      <point name="'penPair':'z12'" type="curve" x="341" y="-5" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z15'" type="line" x="58" y="615" />
+      <point name="'penPair':'z15'" type="line" x="58" y="561" />
+      <point name="'penPair':'z17'" type="line" x="302" y="561" />
+      <point x="274" y="297" />
+      <point x="219" y="100" />
+      <point name="'penPair':'z16'" type="curve" x="33" y="-82" />
+      <point name="'penPair':'z16'" type="line" x="78" y="-130" />
+      <point x="297" y="85" />
+      <point x="337" y="311" />
+      <point name="'penPair':'z17'" type="curve" x="367" y="615" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z5'" type="line" x="618" y="456" />
+      <point x="618" y="296" />
+      <point x="689" y="134" />
+      <point name="'penPair':'z6'" type="curve" x="784" y="33" />
+      <point name="'penPair':'z6'" type="line" x="827" y="79" />
+      <point x="724" y="180" />
+      <point x="679" y="308" />
+      <point name="'penPair':'z7'" type="curve" x="679" y="456" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z8'" type="line" x="799" y="429" />
+      <point name="'penPair':'z8'" type="line" x="799" y="485" />
+      <point name="'penPair':'z9'" type="line" x="501" y="485" />
+      <point name="'penPair':'z9'" type="line" x="501" y="429" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z10'" type="line" x="678" y="630" />
+      <point name="'penPair':'z10'" type="line" x="617" y="630" />
+      <point smooth="yes" name="'penPair':'z5'" type="line" x="617" y="486" />
+      <point x="617" y="359" />
+      <point x="607" y="221" />
+      <point name="'penPair':'z11'" type="curve" x="465" y="73" />
+      <point name="'penPair':'z11'" type="line" x="511" y="30" />
+      <point x="603" y="126" />
+      <point x="678" y="281" />
+      <point smooth="yes" name="'penPair':'z7'" type="curve" x="678" y="485" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-109" width="-21" />
+      <hstem pos="-125" width="57" />
+      <hstem pos="429" width="56" />
+      <hstem pos="561" width="54" />
+      <hstem pos="716" width="56" />
+      <hstem pos="811" width="-20" />
+      <vstem pos="302" width="65" />
+      <vstem pos="397" width="63" />
+      <vstem pos="617" width="63" />
+      <vstem pos="829" width="62" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

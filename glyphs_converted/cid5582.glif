@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid5582">
+  <advance height="-150" width="1000" />
+  <unicode hex="641C" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z1, hr00" type="line" x="452" y="252" />
+      <point x="536" y="32" />
+      <point x="698" y="-65" />
+      <point name="'penPair':'z2'" type="curve" x="923" y="-131" />
+      <point name="'penPair':'z2'" type="line" x="955" y="-75" />
+      <point x="740" y="-14" />
+      <point x="605" y="51" />
+      <point name="'penPair':'z1'" type="curve" x="522" y="252" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z11'" type="line" x="767" y="228" />
+      <point x="659" y="48" />
+      <point x="509" y="-20" />
+      <point name="'penPair':'z3'" type="curve" x="334" y="-74" />
+      <point name="'penPair':'z3'" type="line" x="369" y="-131" />
+      <point x="608" y="-53" />
+      <point x="732" y="35" />
+      <point name="'penPair':'z4'" type="curve" x="855" y="245" />
+      <point name="'penPair':'z4'" type="line" x="813" y="285" />
+      <point name="'penPair':'z11'" type="line" x="683" y="285" />
+      <point name="'penPair':'z12'" type="line" x="683" y="362" />
+      <point name="'penPair':'z15'" type="line" x="895" y="362" />
+      <point name="'penPair':'z13'" type="line" x="895" y="743" />
+      <point name="'penPair':'z5'" type="line" x="716" y="743" />
+      <point name="'penPair':'z5'" type="line" x="716" y="688" />
+      <point name="'penPair':'z13'" type="line" x="830" y="688" />
+      <point name="'penPair':'z14'" type="line" x="830" y="579" />
+      <point name="'penPair':'z6'" type="line" x="716" y="579" />
+      <point name="'penPair':'z6'" type="line" x="716" y="524" />
+      <point name="'penPair':'z14'" type="line" x="830" y="524" />
+      <point name="'penPair':'z15'" type="line" x="830" y="416" />
+      <point name="'penPair':'z12'" type="line" x="683" y="416" />
+      <point name="'penPair':'z7'" type="line" x="683" y="808" />
+      <point name="'penPair':'z7'" type="line" x="620" y="808" />
+      <point name="'penPair':'z16'" type="line" x="620" y="416" />
+      <point name="'penPair':'z17'" type="line" x="478" y="416" />
+      <point name="'penPair':'z18'" type="line" x="478" y="524" />
+      <point name="'penPair':'z8'" type="line" x="586" y="524" />
+      <point name="'penPair':'z8'" type="line" x="586" y="579" />
+      <point name="'penPair':'z18'" type="line" x="478" y="579" />
+      <point name="'penPair':'z9'" type="line" x="478" y="688" />
+      <point x="513" y="693" />
+      <point x="549" y="702" />
+      <point name="'penPair':'z9'" type="curve" x="590" y="714" />
+      <point name="'penPair':'z19'" type="line" x="572" y="770" />
+      <point x="518" y="750" />
+      <point x="473" y="742" />
+      <point name="'penPair':'z19'" type="curve" x="414" y="736" />
+      <point name="'penPair':'z17'" type="line" x="414" y="362" />
+      <point name="'penPair':'z16'" type="line" x="620" y="362" />
+      <point name="'penPair':'z20'" type="line" x="620" y="285" />
+      <point name="'penPair':'z10'" type="line" x="422" y="285" />
+      <point name="'penPair':'z10'" type="line" x="422" y="228" />
+    </contour>
+    <contour>
+      <point smooth="yes" name="'penPair':'z25'" type="line" x="174" y="-28" />
+      <point x="174" y="-67" />
+      <point x="176" y="-68" />
+      <point smooth="yes" name="'penPair':'z26'" type="curve" x="146" y="-68" />
+      <point x="128" y="-68" />
+      <point x="108" y="-66" />
+      <point name="'penPair':'z21'" type="curve" x="70" y="-58" />
+      <point name="'penPair':'z21'" type="line" x="89" y="-123" />
+      <point x="125" y="-127" />
+      <point x="138" y="-128" />
+      <point smooth="yes" name="'penPair':'z26'" type="curve" x="160" y="-128" />
+      <point x="215" y="-128" />
+      <point x="238" y="-121" />
+      <point smooth="yes" name="'penPair':'z25'" type="curve" x="238" y="-47" />
+      <point name="'penPair':'z27'" type="line" x="238" y="561" />
+      <point name="'penPair':'z22'" type="line" x="351" y="561" />
+      <point name="'penPair':'z22'" type="line" x="351" y="616" />
+      <point name="'penPair':'z27'" type="line" x="238" y="616" />
+      <point name="'penPair':'z23'" type="line" x="238" y="807" />
+      <point name="'penPair':'z23'" type="line" x="174" y="807" />
+      <point name="'penPair':'z28'" type="line" x="174" y="616" />
+      <point name="'penPair':'z24'" type="line" x="52" y="616" />
+      <point name="'penPair':'z24'" type="line" x="52" y="561" />
+      <point name="'penPair':'z28'" type="line" x="174" y="561" />
+    </contour>
+    <contour>
+      <point name="'penPair':'z29'" type="line" x="356" y="426" />
+      <point x="248" y="376" />
+      <point x="144" y="332" />
+      <point name="'penPair':'z30'" type="curve" x="39" y="294" />
+      <point name="'penPair':'z30'" type="line" x="60" y="231" />
+      <point x="167" y="276" />
+      <point x="268" y="320" />
+      <point name="'penPair':'z29'" type="curve" x="366" y="369" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-110" width="-21" />
+      <hstem pos="228" width="57" />
+      <hstem pos="362" width="54" />
+      <hstem pos="524" width="55" />
+      <hstem pos="561" width="55" />
+      <hstem pos="688" width="55" />
+      <hstem pos="807" width="-20" />
+      <hstem pos="808" width="-20" />
+      <vstem pos="174" width="64" />
+      <vstem pos="414" width="64" />
+      <vstem pos="620" width="63" />
+      <vstem pos="716" width="179" />
+      <vstem pos="830" width="65" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

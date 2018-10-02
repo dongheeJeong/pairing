@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid6469">
+  <advance height="-150" width="1000" />
+  <unicode hex="4EFB" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="847" y="813" />
+      <point x="700" y="781" />
+      <point x="511" y="755" />
+      <point type="curve" x="364" y="740" />
+      <point type="line" x="390" y="681" />
+      <point x="562" y="700" />
+      <point x="723" y="724" />
+      <point type="curve" x="884" y="756" />
+    </contour>
+    <contour>
+      <point type="line" x="596" y="736" />
+      <point type="line" x="596" y="388" />
+      <point type="line" x="321" y="388" />
+      <point type="line" x="321" y="326" />
+      <point type="line" x="596" y="326" />
+      <point type="line" x="596" y="-48" />
+      <point type="line" x="343" y="-48" />
+      <point type="line" x="343" y="-109" />
+      <point type="line" x="924" y="-109" />
+      <point type="line" x="924" y="-48" />
+      <point type="line" x="665" y="-48" />
+      <point type="line" x="665" y="326" />
+      <point type="line" x="956" y="326" />
+      <point type="line" x="956" y="388" />
+      <point type="line" x="665" y="388" />
+      <point type="line" x="665" y="744" />
+    </contour>
+    <contour>
+      <point type="line" x="260" y="821" />
+      <point x="199" y="620" />
+      <point x="135" y="483" />
+      <point type="curve" x="20" y="292" />
+      <point type="line" x="66" y="234" />
+      <point x="173" y="408" />
+      <point x="257" y="596" />
+      <point type="curve" x="322" y="796" />
+    </contour>
+    <contour>
+      <point type="line" x="163" y="476" />
+      <point type="line" x="163" y="-130" />
+      <point type="line" x="230" y="-130" />
+      <point type="line" x="230" y="619" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-109" width="-21" />
+      <hstem pos="-109" width="61" />
+      <hstem pos="326" width="62" />
+      <hstem pos="821" width="-20" />
+      <vstem pos="163" width="67" />
+      <vstem pos="596" width="69" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

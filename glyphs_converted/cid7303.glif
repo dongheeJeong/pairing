@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid7303">
+  <advance height="-150" width="1000" />
+  <unicode hex="51FA" />
+  <outline>
+    <contour>
+      <point name="'penPair':'z6, hr01" type="line" x="907" y="-109" />
+      <point name="'penPair':'z1'" type="line" x="907" y="244" />
+      <point name="'penPair':'z1'" type="line" x="837" y="244" />
+      <point name="'penPair':'z6'" type="line" x="837" y="-52" />
+      <point name="'penPair':'z7'" type="line" x="535" y="-52" />
+      <point name="'penPair':'z8'" type="line" x="535" y="391" />
+      <point name="'penPair':'z9, hr02" type="line" x="862" y="391" />
+      <point name="'penPair':'z2'" type="line" x="862" y="735" />
+      <point name="'penPair':'z2'" type="line" x="792" y="735" />
+      <point name="'penPair':'z9'" type="line" x="792" y="447" />
+      <point name="'penPair':'z8'" type="line" x="535" y="447" />
+      <point name="'penPair':'z3'" type="line" x="535" y="812" />
+      <point name="'penPair':'z3'" type="line" x="466" y="812" />
+      <point name="'penPair':'z10'" type="line" x="466" y="447" />
+      <point name="'penPair':'z11'" type="line" x="208" y="447" />
+      <point name="'penPair':'z4'" type="line" x="208" y="735" />
+      <point name="'penPair':'z4'" type="line" x="138" y="735" />
+      <point name="'penPair':'z11'" type="line" x="138" y="391" />
+      <point name="'penPair':'z10'" type="line" x="466" y="391" />
+      <point name="'penPair':'z7'" type="line" x="466" y="-52" />
+      <point name="'penPair':'z12, hr03" type="line" x="163" y="-52" />
+      <point name="'penPair':'z5'" type="line" x="163" y="244" />
+      <point name="'penPair':'z5'" type="line" x="93" y="244" />
+      <point name="'penPair':'z12'" type="line" x="93" y="-109" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr01">
+      <hstem pos="-109" width="57" />
+      <hstem pos="391" width="56" />
+      <hstem pos="812" width="-20" />
+      <vstem pos="93" width="70" />
+      <vstem pos="466" width="69" />
+      <vstem pos="837" width="70" />
+    </hintset>
+    <hintset pointTag="hr02">
+      <hstem pos="-109" width="57" />
+      <hstem pos="391" width="56" />
+      <hstem pos="812" width="-20" />
+      <vstem pos="138" width="70" />
+      <vstem pos="466" width="69" />
+      <vstem pos="792" width="70" />
+    </hintset>
+    <hintset pointTag="hr03">
+      <hstem pos="-109" width="57" />
+      <hstem pos="391" width="56" />
+      <hstem pos="812" width="-20" />
+      <vstem pos="93" width="70" />
+      <vstem pos="466" width="69" />
+      <vstem pos="837" width="70" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

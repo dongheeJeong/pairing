@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<glyph format="1" name="cid6281">
+  <advance height="-150" width="1000" />
+  <unicode hex="2F49" />
+  <unicode hex="6708" />
+  <outline>
+    <contour>
+      <point name="hr00" type="line" x="773" y="549" />
+      <point type="line" x="260" y="549" />
+      <point type="line" x="260" y="493" />
+      <point type="line" x="773" y="493" />
+    </contour>
+    <contour>
+      <point type="line" x="777" y="318" />
+      <point type="line" x="252" y="318" />
+      <point type="line" x="252" y="261" />
+      <point type="line" x="777" y="261" />
+    </contour>
+    <contour>
+      <point smooth="yes" type="line" x="740" y="-27" />
+      <point x="740" y="-48" />
+      <point x="738" y="-54" />
+      <point smooth="yes" type="curve" x="704" y="-54" />
+      <point x="687" y="-54" />
+      <point x="640" y="-53" />
+      <point type="curve" x="576" y="-45" />
+      <point type="line" x="594" y="-105" />
+      <point x="636" y="-109" />
+      <point x="685" y="-111" />
+      <point smooth="yes" type="curve" x="708" y="-111" />
+      <point x="783" y="-111" />
+      <point x="807" y="-104" />
+      <point smooth="yes" type="curve" x="807" y="-20" />
+      <point type="line" x="807" y="773" />
+      <point type="line" x="215" y="773" />
+      <point smooth="yes" type="line" x="215" y="345" />
+      <point x="215" y="189" />
+      <point x="207" y="44" />
+      <point type="curve" x="123" y="-105" />
+      <point type="line" x="186" y="-136" />
+      <point x="258" y="2" />
+      <point x="282" y="136" />
+      <point smooth="yes" type="curve" x="282" y="332" />
+      <point type="line" x="282" y="716" />
+      <point type="line" x="740" y="716" />
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.609</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="hr00">
+      <hstem pos="-115" width="-21" />
+      <hstem pos="261" width="57" />
+      <hstem pos="493" width="56" />
+      <hstem pos="716" width="57" />
+      <vstem pos="215" width="66" />
+      <vstem pos="740" width="67" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>
