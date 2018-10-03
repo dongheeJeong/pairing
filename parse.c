@@ -18,16 +18,18 @@ void do_pairing(char *glif_name)
 	init_struct_line();
 	detect_contour_type(&g);
 
+	//
+	//
+	detect_namu_mok(&g);
+	//
+	//
+
 	/* do pairing for each contours */
 	for(i = 0; i < g.num_of_contours; i++) 
 		pair_contour(g.contours[i]);
 
 	output_glif_file(buf, glif_name);
 	free_glif();
-
-#ifdef debug
-	print_glif();
-#endif
 }
 
 void read_glif(char *buf, char *glif_name)
@@ -107,6 +109,9 @@ void init_struct_contour(int num_of_contours, int *points_in_contours)
 		c[i] = malloc(sizeof(Contour));
 		c[i]->contour_t = alone;
 		c[i]->num_of_points = points_in_contours[i];
+		c[i]->num_of_line_points = 0;
+		c[i]->num_of_curve_points = 0;
+
 		c[i]->points = malloc(sizeof(Point*) * points_in_contours[i]);
 		c[i]->lines = NULL;
 
@@ -115,6 +120,8 @@ void init_struct_contour(int num_of_contours, int *points_in_contours)
 
 		c[i]->parent = NULL;
 		c[i]->has_parent = false;
+
+		c[i]->is_namu_mok = false;
 		c[i]->num_of_paired_points = 0;
 	}
 
@@ -182,9 +189,11 @@ void init_struct_point(char *buf)
 		p->pair_num = -1;
 		if(point_t == line) {
 			p->point_t = line;
+			c->num_of_line_points++;
 		}
 		else if(point_t == curve) {
 			p->point_t = curve;
+			c->num_of_curve_points++;
 		}
 		else if(point_t == etc) {
 			p->point_t = etc;
@@ -300,6 +309,68 @@ void detect_contour_type(Glif *g)
 	}
 }
 
+void detect_namu_mok(Glif *g)
+{
+	Contour *c;
+	bool is_valid;
+	Point *p_src = NULL, *p_tmp = NULL;
+	int i, j, k, point_ind, cnt_curve_point, cnt_line_points[3] = {0, };
+	const int valid[4][3] = { 
+		{3, 1, 9}, 
+		{1, 9, 1},
+		{9, 1, 3},
+		{1, 3, 1}
+	};
+
+	for(i = 0; i < g->num_of_contours; i++) {
+		c = g->contours[i];
+		if(c->num_of_line_points != 14 || c->num_of_curve_points != 4) 
+			continue;
+	
+		// find first curve point
+		point_ind = -1;
+		while(1) {
+			p_src = c->points[++point_ind];
+			if(p_src->point_t == curve)
+				break;
+		}
+
+		p_tmp = p_src;
+		cnt_curve_point = 0;
+		point_ind++;
+		while(1) {
+			if(c->points[point_ind]->point_t == line)
+				cnt_line_points[cnt_curve_point]++;
+			else if(c->points[point_ind]->point_t == curve) {
+				cnt_curve_point++;
+				p_tmp = c->points[point_ind];
+
+				if(p_tmp == p_src)
+					break;
+			}
+
+			point_ind = (point_ind+1) % c->num_of_points;
+		}
+
+		// check cnt_line_points[] with valid[] same
+		for(j = 0; j < 4; j++) {
+
+			is_valid = true;
+			for(k = 0; k < 3; k++) {
+				if(valid[j][k] != cnt_line_points[k]) {
+					is_valid &= false;
+				}
+			}
+
+			if(is_valid) {
+				c->is_namu_mok = true;
+				strcpy(c->name, entry->d_name);
+				break;
+			}
+		}
+	}
+}
+
 void free_glif(void)
 {
 	int i, j;
@@ -344,7 +415,6 @@ char *strnstr(const char *haystack, const char *needle, size_t len)
         return NULL;
 }
 
-#ifdef debug
 void print_glif(void)
 {
 	int i, j;
@@ -361,7 +431,8 @@ void print_glif(void)
 			str = "child";
 		else if(c->contour_t == 2)
 			str = "alone";
-		printf("contours[%d] = { type: %s, num_of_points: %d }\n", i, str, c->num_of_points);
+		printf("contours[%d] = { type: %s, num_of_points: %d, num_of_line_points: %d, num_of_curve_points: %d }\n", 
+				i, str, c->num_of_points, c->num_of_line_points, c->num_of_curve_points);
 	}
 
 	for(i = 0; i < g.num_of_contours; i++) {
@@ -379,9 +450,20 @@ void print_glif(void)
 		}
 	}
 }
-#endif
 
+void print_namu_mok(void)
+{
+	int i;
+	Contour *c;
 
+	for(i = 0; i < g.num_of_contours; i++) {
+		c = g.contours[i];
+		if(c->is_namu_mok) {
+			printf("%s\n", c->name);
+			num_of_namumoks++;
+		}
+	}
+}
 
 
 

@@ -116,6 +116,14 @@ void output_glif_file(char *buf, char *glif_name)
 	printf("start\n");
 	printf("%s\n", output_buf);
 #endif
+
+#ifdef PRINT_glif
+	print_glif();
+#endif
+
+#ifdef PRINT_namu_mok
+	print_namu_mok();
+#endif
 }
 
 void make_line_by_line(char *buf, char **line_buf)

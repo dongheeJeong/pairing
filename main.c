@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <dirent.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include "pair.h"
@@ -13,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int cnt = 0, cnt2 = 0;
 	DIR *dirp;
-	struct dirent *entry;
+	extern struct dirent *entry;
 	struct timeval begin_t, end_t;
 
 	if(argc != 2) {
@@ -33,16 +32,18 @@ int main(int argc, char *argv[])
 	while((entry = readdir(dirp)) != NULL) {
 		if(strstr(entry->d_name, ".glif") == NULL || strstr(entry->d_name, "cid") == NULL)
 			continue;
-		printf("%s\t", entry->d_name);
+		//printf("%s\t", entry->d_name);
 		cnt++; cnt2++;
 		do_pairing(entry->d_name);
 
 		if(cnt == 8) {
-			printf("\n");
+			//printf("\n");
 			cnt = 0;
 		}
 	}
 	gettimeofday(&end_t, NULL);
+
+	printf("\n%d glif files has namumok. ", num_of_namumoks);
 	printf("\n%d glif files converted. ", cnt2);
 	runtime(&begin_t, &end_t);
 

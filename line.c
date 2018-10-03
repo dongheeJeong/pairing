@@ -117,7 +117,3 @@ bool is_verti_or_horiz(Point *a, Point *b)
 
 
 
-
-
-
-

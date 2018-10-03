@@ -5,8 +5,12 @@
 #include <string.h>
 #include <fcntl.h>
 #include <math.h>
+#include <dirent.h>
 
 //#define debug
+//#define PRINT_glif
+#define PRINT_namu_mok
+
 #define BUFFER_SIZE 4096*4
 #define LINE_SIZE 512
 #define CONTOUR_SIZE 30
@@ -32,8 +36,12 @@ typedef struct line {
 } Line;
 
 typedef struct contour {
+	char name[20];
 	enum Contour_t contour_t;
 	int num_of_points;
+	int num_of_line_points;
+	int num_of_curve_points;
+
 	Point **points;
 	Line  **lines;
 
@@ -42,6 +50,7 @@ typedef struct contour {
 	struct contour *parent;
 	bool has_parent;
 
+	bool is_namu_mok;
 	int num_of_paired_points;
 } Contour;
 
@@ -52,6 +61,8 @@ typedef struct glif {
 } Glif;
 
 Glif g;
+struct dirent *entry;
+int num_of_namumoks;
 
 // main.c
 void make_dir(void);
@@ -65,7 +76,9 @@ void init_struct_contour(int num_of_contours, int *points_in_contours);
 void init_struct_point(char *buf);
 void init_struct_line(void);
 void detect_contour_type(Glif *);
+void detect_namu_mok(Glif *);
 void print_glif(void);
+void print_namu_mok(void);
 char * strnstr(const char *haystack, const char *needle, size_t len);
 void free_glif(void);
 
