@@ -133,7 +133,7 @@ void init_struct_contour(int num_of_contours, int *points_in_contours)
 void init_struct_point(char *buf)
 {
 	int i;
-	char value[5];
+	char value[6];
 	char *ptr, *ptr2;
 	const char *point_prefix = "<point ";
 	const char *point_x_prefix = "x=\"";
@@ -314,7 +314,7 @@ void detect_namu_mok(Glif *g)
 	Contour *c;
 	bool is_valid;
 	Point *p_src = NULL, *p_tmp = NULL;
-	int i, j, k, point_ind, cnt_curve_point, cnt_line_points[3] = {0, };
+	int i, j, k, point_ind, cnt_curve_point, cnt_line_points[4] = {0, };
 	const int valid[4][3] = { 
 		{3, 1, 9}, 
 		{1, 9, 1},
