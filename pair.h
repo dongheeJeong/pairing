@@ -15,6 +15,16 @@
 #define LINE_SIZE 512
 #define CONTOUR_SIZE 30
 #define CHILD_NUM 10
+#define next_index(contour, cur_index)								\
+({																	\
+ cur_index == (contour->num_of_points - 1)? 0 : (cur_index + 1);	\
+})
+
+#define prev_index(contour, cur_index)                				\
+({                                                          		\
+ cur_index == 0? (contour->num_of_points - 1) : (cur_index - 1);  	\
+})
+
 
 enum Point_t { line, curve, etc, none };
 enum Contour_t { parent, child, alone };
@@ -98,6 +108,7 @@ bool pair_points(Point*, Point*, int*);
 void pair_points_force(Point*, Point*, int*);
 bool is_points_in_a_contour(Point*, Point*, Contour *parent);
 bool are_two_inner_points_in_contour(Point*, Point*, Contour*);
+void exception_namu_mok(Contour *);
 
 // glif.c
 void output_glif_file(char *buf, char *glif_name);

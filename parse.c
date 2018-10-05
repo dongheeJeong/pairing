@@ -16,13 +16,9 @@ void do_pairing(char *glif_name)
 	init_struct_contour(num_of_contours, points_in_contours);
 	init_struct_point(buf);
 	init_struct_line();
-	detect_contour_type(&g);
 
-	//
-	//
+	detect_contour_type(&g);
 	detect_namu_mok(&g);
-	//
-	//
 
 	/* do pairing for each contours */
 	for(i = 0; i < g.num_of_contours; i++) 

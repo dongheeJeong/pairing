@@ -59,6 +59,11 @@ void pair_contour_type_alone(Contour *c)
 		}
 	}
 
+	if(c->is_namu_mok) {
+		exception_namu_mok(c);
+		return ;
+	}
+
 	// pair the remain points
 	for(i = l = 0; l < num_of_points; i = (i+1) % num_of_points, l++) {
 		if(c->points[i]->is_paired)
@@ -450,6 +455,82 @@ bool are_two_inner_points_in_contour(Point *a, Point *b, Contour *c)
 
 	return ret;
 }
+
+void exception_namu_mok(Contour *c)
+{
+	int i, index, index2;
+	int curve_index1, curve_index2;
+	Point *curve_p1 = NULL, *curve_p2 = NULL;
+
+	// find two unpaired curve points
+	for(i = index = 0; i < c->num_of_points; i++) {
+		if(!c->points[index]->is_paired && c->points[index]->point_t == curve) {
+			if(curve_p1 == NULL) {
+				curve_p1 = c->points[index];
+				curve_index1 = index;
+			}
+			else {
+				curve_p2 = c->points[index];
+				curve_index2 = index;
+			}
+		}
+
+		index = next_index(c, index);
+	}
+
+	// pair two unpaired curve points correctlly
+	index = prev_index(c, curve_index1);
+	index = prev_index(c, index);
+	if(c->points[index]->is_paired && c->points[index]->point_t == curve) {
+		index = prev_index(c, index);
+		pair_points_force(curve_p1, c->points[index], &g.pair_num);
+
+		index = prev_index(c, curve_index2);
+		index = prev_index(c, index);
+		index = prev_index(c, index);
+		pair_points_force(curve_p2, c->points[index], &g.pair_num);
+	}
+	else {
+		index = next_index(c, curve_index1);
+		index = next_index(c, index);
+		index = next_index(c, index);
+		pair_points_force(curve_p1, c->points[index], &g.pair_num);
+
+		index = next_index(c, curve_index2);
+		index = next_index(c, index);
+		index = next_index(c, index);
+		pair_points_force(curve_p2, c->points[index], &g.pair_num);
+	}
+
+	// pair final two line points
+	for(i = index = 0; i < c->num_of_points; i++) {
+		if(c->points[index]->point_t == line && !c->points[index]->is_paired)
+			break;
+		index = next_index(c, index);
+	}
+
+	index2 = next_index(c, index);
+	index2 = next_index(c, index2);
+	index2 = next_index(c, index2);
+
+	if(c->points[index2]->is_paired) {
+		index2 = prev_index(c, index);
+		index2 = prev_index(c, index2);
+		index2 = prev_index(c, index2);
+	}
+
+	pair_points_force(c->points[index], c->points[index2], &g.pair_num);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
