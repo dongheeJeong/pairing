@@ -34,7 +34,7 @@ def getY(line) :
 
 def draw_glif(name) :
 	try :
-		glif = open('cid3644.glif')
+		glif = open(name)
 		lines = [line.rstrip('\n') for line in glif]
 
 		listX = []
@@ -50,13 +50,15 @@ def draw_glif(name) :
 						j = 0
 					else :
 						j = i + 1
+					print(len(listX), len(listY))
+					print(i, j)
 					plt.plot([listX[i], listX[j]], [listY[i], listY[j]], color=color[ind])
 					print('[' , listX[i] , ',' , listY[i] , '], [' , listX[j] , ',' , listY[j] , ']')
 
 				listX.clear()
 				listY.clear()
 				print('-----------------------------')
-				ind += 1
+				ind = (ind+1) % 6
 				continue
 
 			if 'type' not in line :
@@ -76,7 +78,7 @@ def draw_glif(name) :
 		return
 
 glifName = input('glif number: ')
-draw_glif('cid' + glifName + 'glif')
+draw_glif('cid' + glifName + '.glif')
 
 
 
