@@ -349,16 +349,28 @@ bool is_valid(Contour *c, int p_ind, int p2_ind)
 	}
 	// not a vertical or horizontal line (diagonal line)
 	else if(p1->y == p2->y && p3->y == p4->y) {
+		// same direction
 		if(p1->x < p2->x && p3->x > p4->x) {
-
-
+			plus_or_minus = -1;
 		}
+		else if(p1->x > p2->x && p3->x < p4->x) {
+			plus_or_minus = 1;
+		}
+		// different direction
+		else 
+			return false;
 	}
 	else if(p1->x == p2->x && p3->x == p4->x) {
+		// same direction
 		if(p3->y < p4->y && p2->y < p1->y) {
-
-
+			plus_or_minus = 1;
 		}
+		else if(p3->y > p4->y && p2->y > p1->y) {
+			plus_or_minus = -1;
+		}
+		// different direction
+		else
+			return false;
 	}
 	//
 	else
@@ -369,9 +381,9 @@ bool is_valid(Contour *c, int p_ind, int p2_ind)
 	double interX = (p2->x + p3->x) / 2;
 	double interY = (p2->y + p3->y) / 2;
 
-	if(p2->x == p3->x)
+	if(p2->x == p3->x || (p1->y == p2->y && p3->y == p4->y))
 		interX += (plus_or_minus) * depart;
-	else if(p2->y == p3->y)
+	else if(p2->y == p3->y || (p1->x == p2->x && p3->x == p4->x))
 		interY += (plus_or_minus) * depart;
 
 	return is_point_in_contour((int) interX, (int) interY, c);

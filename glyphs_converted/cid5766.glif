@@ -4,20 +4,20 @@
   <unicode hex="6DF1" />
   <outline>
     <contour>
-      <point name="'penPair':'z9, hr00" type="line" x="657" y="184" />
+      <point name="'penPair':'z7, hr00" type="line" x="657" y="184" />
       <point x="716" y="98" />
       <point x="788" y="31" />
       <point name="'penPair':'z1'" type="curve" x="895" y="-47" />
       <point name="'penPair':'z1'" type="line" x="934" y="5" />
       <point x="821" y="80" />
       <point x="754" y="144" />
-      <point name="'penPair':'z9'" type="curve" x="700" y="227" />
+      <point name="'penPair':'z7'" type="curve" x="700" y="227" />
       <point name="'penPair':'z2'" type="line" x="917" y="227" />
       <point name="'penPair':'z2'" type="line" x="917" y="284" />
-      <point name="'penPair':'z7'" type="line" x="657" y="284" />
+      <point name="'penPair':'z9'" type="line" x="657" y="284" />
       <point name="'penPair':'z3'" type="line" x="657" y="406" />
       <point name="'penPair':'z3'" type="line" x="592" y="406" />
-      <point name="'penPair':'z7'" type="line" x="592" y="284" />
+      <point name="'penPair':'z9'" type="line" x="592" y="284" />
       <point name="'penPair':'z4'" type="line" x="343" y="284" />
       <point name="'penPair':'z4'" type="line" x="343" y="227" />
       <point name="'penPair':'z8'" type="line" x="551" y="227" />

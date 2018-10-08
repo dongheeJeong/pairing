@@ -33,7 +33,7 @@
     </contour>
     <contour>
       <point name="'penPair':'z9'" type="line" x="282" y="-131" />
-      <point name="'penPair':'z17'" type="line" x="282" y="418" />
+      <point name="'penPair':'z15'" type="line" x="282" y="418" />
       <point x="305" y="338" />
       <point x="340" y="240" />
       <point name="'penPair':'z10'" type="curve" x="382" y="154" />
@@ -43,20 +43,20 @@
       <point name="'penPair':'z15'" type="curve" x="293" y="553" />
       <point name="'penPair':'z11'" type="line" x="405" y="553" />
       <point name="'penPair':'z11'" type="line" x="405" y="607" />
-      <point name="'penPair':'z16'" type="line" x="282" y="607" />
+      <point name="'penPair':'z17'" type="line" x="282" y="607" />
       <point name="'penPair':'z12'" type="line" x="282" y="806" />
       <point name="'penPair':'z12'" type="line" x="220" y="806" />
-      <point name="'penPair':'z16'" type="line" x="220" y="607" />
+      <point name="'penPair':'z17'" type="line" x="220" y="607" />
       <point name="'penPair':'z13'" type="line" x="87" y="607" />
       <point name="'penPair':'z13'" type="line" x="87" y="553" />
-      <point name="'penPair':'z15'" type="line" x="210" y="553" />
+      <point name="'penPair':'z16'" type="line" x="210" y="553" />
       <point x="178" y="432" />
       <point x="116" y="272" />
       <point name="'penPair':'z14'" type="curve" x="44" y="140" />
       <point name="'penPair':'z14'" type="line" x="94" y="87" />
       <point x="147" y="191" />
       <point x="189" y="308" />
-      <point name="'penPair':'z17'" type="curve" x="220" y="416" />
+      <point name="'penPair':'z16'" type="curve" x="220" y="416" />
       <point name="'penPair':'z9'" type="line" x="220" y="-131" />
     </contour>
   </outline>
