@@ -347,6 +347,20 @@ bool is_valid(Contour *c, int p_ind, int p2_ind)
 		else
 			plus_or_minus = 1;
 	}
+	// not a vertical or horizontal line (diagonal line)
+	else if(p1->y == p2->y && p3->y == p4->y) {
+		if(p1->x < p2->x && p3->x > p4->x) {
+
+
+		}
+	}
+	else if(p1->x == p2->x && p3->x == p4->x) {
+		if(p3->y < p4->y && p2->y < p1->y) {
+
+
+		}
+	}
+	//
 	else
 		return true;
 
