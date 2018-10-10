@@ -378,9 +378,16 @@ bool is_valid(Contour *c, int p_ind, int p2_ind)
 		else
 			return false;
 	}
-	//
-	else
+	// different direction flase
+	else {
+		if((p1->x - p2->x) * (p3->x - p4->x) >= 0) {
+			return false;
+		}
+		else if((p1->y - p2->y) * (p3->y - p4->y) >= 0) {
+			return false;
+		}
 		return true;
+	}
 
 	// if out of contour -> return false
 	const int depart = 15;
