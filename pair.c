@@ -306,6 +306,12 @@ bool is_valid(Contour *c, int p_ind, int p2_ind)
 		prev = num_of_points - 2;
 		next = p_ind + 1;
 	}
+	else if(p_ind == c->num_of_points-1 && p2_ind == 0) {
+		p2 = c->points[p_ind];
+		p3 = c->points[p2_ind];
+		prev = num_of_points - 2;
+		next = p2_ind + 1;
+	}
 	else if(p_ind < p2_ind) {
 		p2 = c->points[p_ind];
 		p3 = c->points[p2_ind];
