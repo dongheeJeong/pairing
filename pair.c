@@ -90,7 +90,7 @@ void pair_contour_type_alone(Contour *c)
 				//if(i == j) flag = 1;
 				continue;
 			}
-			else if((i-j) == 1 || (i-j) == -1 || (i-j) ==num_of_points || (i-j) == -1 * num_of_points || i == j) {
+			else if((i-j) == 1 || (i-j) == -1 || (i-j) == (num_of_points-1) || (i-j) == -1 * (num_of_points-1) || i == j) {
 				j = (j+1) % num_of_points;
 				continue;
 			}
