@@ -103,6 +103,7 @@ void init_struct_contour(int num_of_contours, int *points_in_contours)
 
 	for(i = 0; i < num_of_contours; i++) {
 		c[i] = malloc(sizeof(Contour));
+		c[i]->cid = i;
 		c[i]->contour_t = alone;
 		c[i]->num_of_points = points_in_contours[i];
 		c[i]->num_of_line_points = 0;
@@ -271,36 +272,81 @@ void init_struct_line(void)
 
 void detect_contour_type(Glif *g)
 {
-	int i, j, k, in_count;
+	int i, j, k, l, in_count;
 	int num_of_contours = g->num_of_contours;
 	Contour *c1, *c2;
-	bool in;
+	bool is_in;
+	Contour *child_not_filtered[15];
+	int num_childs = 0;
 
 	/* for every contour */
 	for(i = 0; i < num_of_contours; i++) {
 		c1 = g->contours[i];
+		if(c1->contour_t == child)
+			continue;
 
+		num_childs = 0;
 		for(j = (i+1) % num_of_contours; j != i; j = (j+1) % num_of_contours) {
 			c2 = g->contours[j];
 
 			/* check is point in the contour */
 			for(k = 0, in_count = 0; k < c2->num_of_points; k++) {
-				in = is_point_in_contour(c2->points[k]->x, c2->points[k]->y, c1);
-				if(in) in_count++;
+				is_in = is_point_in_contour(c2->points[k]->x, c2->points[k]->y, c1);
+				if(is_in) in_count++;
 
-				in = is_point_in_contour((c2->lines[k]->x1 + c2->lines[k]->x2) / 2, (c2->lines[k]->y1 + c2->lines[k]->y2) / 2, c1);
-				if(in) in_count++;
+				is_in = is_point_in_contour((c2->lines[k]->x1 + c2->lines[k]->x2) / 2, (c2->lines[k]->y1 + c2->lines[k]->y2) / 2, c1);
+				if(is_in) in_count++;
 			}
 
 			/* if every points are in the contour, detect contour type*/
 			if(in_count == c2->num_of_points * 2) {
+				child_not_filtered[num_childs++] = c2;
+				/*
 				c2->contour_t = child;
 				c1->contour_t = parent;
 
 				c1->child[c1->num_of_childs++] = (struct contour*)c2;
 				c2->parent = (struct contour*) c1;
 				c2->has_parent = true;
+				*/
 			}
+		}
+
+		// do filter the child_arr_not_filtered
+		for(j = 0; j < num_childs; j++) {
+			if(child_not_filtered[j] == NULL)
+				continue;
+			else
+				c2 = child_not_filtered[j];
+
+			for(k = (j+1) % num_childs; k != j; k = (k+1) % num_childs) {
+				for(l = 0; l < c2->num_of_points; l++) {
+					if(child_not_filtered[k] == NULL)
+						continue;
+
+					is_in = is_point_in_contour(c2->points[l]->x, c2->points[l]->y, child_not_filtered[k]);
+					if(is_in) {
+						child_not_filtered[j] = NULL;
+						goto NEXT_CHILD;
+					}
+				}
+			}
+NEXT_CHILD:	;
+		}
+
+		// init filtered child
+		for(j = 0; j < num_childs; j++) {
+			if(child_not_filtered[j] == NULL)
+				continue;
+			else
+				c2 = child_not_filtered[j];
+
+			c2->contour_t = child;
+			c1->contour_t = parent;
+
+			c1->child[c1->num_of_childs++] = (struct contour*)c2;
+			c2->parent = (struct contour*) c1;
+			c2->has_parent = true;
 		}
 	}
 }
@@ -427,24 +473,32 @@ void print_glif(void)
 			str = "child";
 		else if(c->contour_t == 2)
 			str = "alone";
-		printf("contours[%d] = { type: %s, num_of_points: %d, num_of_line_points: %d, num_of_curve_points: %d }\n", 
-				i, str, c->num_of_points, c->num_of_line_points, c->num_of_curve_points);
+		printf("\ncontours[%d] = { type: %s, num_of_points: %d, num_of_line_points: %d, num_of_curve_points: %d, cid: %d }", 
+				i, str, c->num_of_points, c->num_of_line_points, c->num_of_curve_points, c->cid);
+
+		for(j = 0; j < c->num_of_childs; j++) 
+			printf("\n\t-> child[%d] = { num_of_points: %d, num_of_line_points: %d, num_of_curve_points: %d, cid: %d }",
+					j, c->child[j]->num_of_points, c->child[j]->num_of_line_points, c->child[j]->num_of_curve_points, c->child[j]->cid);
 	}
+	printf("\n");
 
 	for(i = 0; i < g.num_of_contours; i++) {
 		c = g.contours[i];
 		for(j = 0; j < c->num_of_points; j++) {
 			p = c->points[j];
-			printf("contours[%d].points[%d] = { x: %d, y: %d, pair_num: %d }\n", i, j, p->x, p->y, p->pair_num);
+			printf("\ncontours[%d].points[%d] = { x: %d, y: %d, pair_num: %d }", i, j, p->x, p->y, p->pair_num);
 		}
 	}
+	printf("\n");
+
 	for(i = 0; i < g.num_of_contours; i++) {
 		c = g.contours[i];
 		for(j = 0; j < c->num_of_points; j++) {
 			line = c->lines[j];
-			printf("contours[%d].lines[%d] = { x1: %d, y1: %d, x2: %d, y2: %d, a: %f, intercept_y: %f }\n", i, j, line->x1, line->y1, line->x2, line->y2, line->a, line->intercept_y);
+			printf("\ncontours[%d].lines[%d] = { x1: %d, y1: %d, x2: %d, y2: %d, a: %f, intercept_y: %f }", i, j, line->x1, line->y1, line->x2, line->y2, line->a, line->intercept_y);
 		}
 	}
+	printf("\n");
 }
 
 void print_namu_mok(void)

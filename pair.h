@@ -47,6 +47,7 @@ typedef struct line {
 
 typedef struct contour {
 	char name[20];
+	int cid;	// contour id
 	enum Contour_t contour_t;
 	int num_of_points;
 	int num_of_line_points;
