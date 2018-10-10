@@ -298,17 +298,9 @@ void detect_contour_type(Glif *g)
 				if(is_in) in_count++;
 			}
 
-			/* if every points are in the contour, detect contour type*/
+			/* if contour in the c1, at this time just add in not filtered array */
 			if(in_count == c2->num_of_points * 2) {
 				child_not_filtered[num_childs++] = c2;
-				/*
-				c2->contour_t = child;
-				c1->contour_t = parent;
-
-				c1->child[c1->num_of_childs++] = (struct contour*)c2;
-				c2->parent = (struct contour*) c1;
-				c2->has_parent = true;
-				*/
 			}
 		}
 
@@ -326,6 +318,7 @@ void detect_contour_type(Glif *g)
 
 					is_in = is_point_in_contour(c2->points[l]->x, c2->points[l]->y, child_not_filtered[k]);
 					if(is_in) {
+						// fliterd. c2 is not child contour
 						child_not_filtered[j] = NULL;
 						goto NEXT_CHILD;
 					}
