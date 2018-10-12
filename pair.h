@@ -26,8 +26,15 @@
  cur_index == 0? (contour->num_of_points - 1) : (cur_index - 1);  	\
 })
 
+#define SIDE_TO_SIDE 0
+#define CROSS_TO_CROSS 1
+#define PARENT_TO_CHILD 2
+#define CHILD_TO_CHILD 3
+#define I_DONT_KNOW 4
+
 
 enum Point_t { line, curve, etc, none };
+enum Direction_t { L, R, no };
 enum Contour_t { parent, child, alone };
 
 typedef struct point {
@@ -35,6 +42,7 @@ typedef struct point {
 	bool is_smooth;	
 	int pair_num;
 	enum Point_t point_t;
+	enum Direction_t direct_t;
 	int x;
 	int y;
 } Point;
@@ -105,6 +113,7 @@ bool is_verti_or_horiz(Point*, Point*);
 void pair_contour(Contour*);
 void pair_contour_type_alone(Contour*);
 void pair_contour_type_parent(Contour*);
+void determine_direction_t(Point *, Point *, int);
 bool is_valid(Contour *c, int p_ind, int p2_ind);
 bool pair_points(Point*, Point*, int*);
 void pair_points_force(Point*, Point*, int*);

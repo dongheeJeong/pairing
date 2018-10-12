@@ -184,6 +184,7 @@ void init_struct_point(char *buf)
 
 		p->is_paired = false;
 		p->pair_num = -1;
+		p->direct_t = no;
 		if(point_t == line) {
 			p->point_t = line;
 			c->num_of_line_points++;

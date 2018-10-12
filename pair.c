@@ -53,6 +53,8 @@ void pair_contour_type_alone(Contour *c)
 		if(min_ind != -1) {
 			is_paired = pair_points(c->points[i], c->points[min_ind], &g.pair_num);
 			if(is_paired) {
+				// determine direction_t
+				determine_direction_t(c->points[i], c->points[min_ind], SIDE_TO_SIDE);
 				c->num_of_paired_points += 2;
 				continue;
 			}
@@ -123,11 +125,15 @@ void pair_contour_type_alone(Contour *c)
 		}
 		else if(min_verti_hori_ind != -1) {
 			is_paired = pair_points(c->points[i], c->points[min_verti_hori_ind], &g.pair_num);
+			if(is_paired)
+				determine_direction_t(c->points[i], c->points[min_verti_hori_ind], CROSS_TO_CROSS);
 			//if(!is_paired && min_ind != -1)
 				//is_paired = pair_points(c->points[i], c->points[min_ind], &g.pair_num);
 		}
 		else if(min_ind != -1) {
 			is_paired = pair_points(c->points[i], c->points[min_ind], &g.pair_num);
+			if(is_paired) 
+				determine_direction_t(c->points[i], c->points[min_ind], CROSS_TO_CROSS);
 		}
 		else {
 			; 
@@ -152,6 +158,7 @@ void pair_contour_type_alone(Contour *c)
 				if(i == j) break;
 			}
 			pair_points_force(c->points[i], c->points[j], &g.pair_num);
+			determine_direction_t(c->points[i], c->points[j], I_DONT_KNOW);
 			c->num_of_paired_points += 2;
 
 			i = (j+1) % c->num_of_points;
@@ -215,6 +222,7 @@ void pair_contour_type_parent(Contour *c)
 		if(min_ind != -1) {
 			//pair_points_force(p, child_point_arr[min_ind], &(g.pair_num));
 			if(pair_points(p, child_point_arr[min_ind], &(g.pair_num))) {
+				determine_direction_t(p, child_point_arr[min_ind], PARENT_TO_CHILD);
 				c->num_of_paired_points++;
 				num_of_child_paired++;
 			}
@@ -277,8 +285,10 @@ void pair_contour_type_parent(Contour *c)
 			p2 = child_point_arr[p2_ind];
 		}
 EXIT:
-		if(min_ind != -1)
+		if(min_ind != -1) {
 			pair_points_force(p, child_point_arr[min_ind], &g.pair_num);
+			determine_direction_t(p, child_point_arr[min_ind], CHILD_TO_CHILD);
+		}
 		num_of_child_paired += 2;
 		c->num_of_paired_points++;
 	}
@@ -561,17 +571,51 @@ void exception_namu_mok(Contour *c)
 	pair_points_force(c->points[index], c->points[index2], &g.pair_num);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+void determine_direction_t(Point *a, Point *b, int flag)
+{
+	switch(flag) {
+		case SIDE_TO_SIDE : 
+		case CROSS_TO_CROSS :
+		case CHILD_TO_CHILD :
+		case I_DONT_KNOW :
+			if(a->x == b->x) {
+				if(a->y > b->y) {
+					a->direct_t = R;
+					b->direct_t = L;
+				}
+				else {
+					a->direct_t = L;
+					b->direct_t = R;
+				}
+			}
+			else if(a->y == b->y) {
+				if(a->x > b->x) {
+					a->direct_t = R;
+					b->direct_t = L;
+				}
+				else {
+					a->direct_t = L;
+					b->direct_t = R;
+				}
+			}
+			// 에잇 모르겠다
+			else {
+				if(a->x > b->x) {
+					a->direct_t = R;
+					b->direct_t = L;
+				}
+				else {
+					a->direct_t = L;
+					b->direct_t = R;
+				}
+			}
+			break;
+		case PARENT_TO_CHILD :
+			// in this case, a would parent, b would child
+			a->direct_t = R;
+			b->direct_t = L;
+			break;
+	}
+}
 
 
