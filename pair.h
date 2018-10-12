@@ -8,8 +8,9 @@
 #include <dirent.h>
 
 //#define debug
-//#define PRINT_glif
-#define PRINT_namu_mok
+//#define PRINT_LIST
+#define PRINT_glif
+//#define PRINT_namu_mok
 
 #define BUFFER_SIZE 4096*4
 #define LINE_SIZE 512

@@ -458,6 +458,7 @@ void print_glif(void)
 	Point *p;
 	char *str;
 
+	printf("\n[%s]", entry->d_name);
 	for(i = 0; i < g.num_of_contours; i++) {
 		c = g.contours[i];
 		if(c->contour_t == 0)

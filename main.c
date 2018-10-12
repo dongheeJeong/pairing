@@ -32,12 +32,16 @@ int main(int argc, char *argv[])
 	while((entry = readdir(dirp)) != NULL) {
 		if(strstr(entry->d_name, ".glif") == NULL || strstr(entry->d_name, "cid") == NULL)
 			continue;
+#ifdef PRINT_LIST
 		printf("%s\t", entry->d_name);
+#endif
 		cnt++; cnt2++;
 		do_pairing(entry->d_name);
 
 		if(cnt == 8) {
+#ifdef PRINT_LIST
 			printf("\n");
+#endif
 			cnt = 0;
 		}
 	}
