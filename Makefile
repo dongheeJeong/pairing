@@ -1,4 +1,4 @@
-CFLAGS = -Wall -W -lm -g
+CFLAGS = -Wall -W -g
 
 Pairing : main.o parse.o line.o pair.o glif.o
 	gcc -o Pairing main.o parse.o line.o pair.o glif.o $(CFLAGS)

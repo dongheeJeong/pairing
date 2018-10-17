@@ -25,7 +25,7 @@ void output_glif_file(char *buf, char *glif_name)
 {
 	extern Glif g;
 	char *line_buf[LINE_SIZE] = { NULL, }, *line_ptr, *ptr, *ptr2, output_buf[BUFFER_SIZE] = { '\0', };
-	char pair[5];
+	char pair[10], direction;
 	int i, cnt_contour, cnt_point;
 	Contour *c;
 	Point *p;
@@ -80,15 +80,21 @@ void output_glif_file(char *buf, char *glif_name)
 				strncat(output_buf, penpair_pre, strlen(penpair_pre));
 			else
 				strncat(output_buf, penpair_pre2, strlen(penpair_pre2));
+			if(p->direct_t == R)
+				direction = 'r';
+			else if(p->direct_t == L)
+				direction = 'l';
+			else 
+				direction = '?';
 
-			sprintf(pair, "%d", p->pair_num);
+			sprintf(pair, "%d%c", p->pair_num, direction);
 			strncat(output_buf, pair, strlen(pair));
 
 			if(ptr2 == NULL)
 				strncat(output_buf, penpair_post, strlen(penpair_post));
 
 			if(ptr2 != NULL)
-				strncat(output_buf, ", ", 2);
+				strncat(output_buf, "', ", 3);
 			strncat(output_buf, ptr, strlen(ptr));
 			output_buf[strlen(output_buf)] = '\n';
 			cnt_point++;
