@@ -8,8 +8,8 @@
 #include <dirent.h>
 
 //#define debug
-//#define PRINT_LIST
-#define PRINT_glif
+#define PRINT_LIST
+//#define PRINT_glif
 //#define PRINT_namu_mok
 
 #define BUFFER_SIZE 4096*4
@@ -41,6 +41,8 @@ typedef struct point {
 	bool is_paired;
 	bool is_smooth;	
 	int pair_num;
+    char depend_x[5];
+    char depend_y[5];
 	enum Point_t point_t;
 	enum Direction_t direct_t;
 	int x;

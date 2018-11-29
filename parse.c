@@ -140,6 +140,10 @@ void init_struct_point(char *buf)
 	const char *type_line = "type=\"line\"";
 	const char *type_curve = "type=\"curve\"";
 	const char *type_qcurve = "type=\"qcurve\"";
+
+    const char *penPair = "penPair=\"z";
+    const char *depend_x= "dependX=\"";
+    const char *depend_y= "dependY=\"";
 	enum Point_t point_t;
 
 	int x, y;
@@ -182,6 +186,8 @@ void init_struct_point(char *buf)
 		c = g.contours[i];
 		p = malloc(sizeof(Point));
 
+        memset(p->depend_x, 0x00, sizeof(p->depend_x));
+        memset(p->depend_y, 0x00, sizeof(p->depend_y));
 		p->is_paired = false;
 		p->pair_num = -1;
 		p->direct_t = no;
@@ -202,6 +208,55 @@ void init_struct_point(char *buf)
 		else
 			p->is_smooth = false;
 
+        // 이미 잡혀있는 pair or depend 확인
+        int len_value, len_line;
+        char *start, *end;
+        end = strstr(ptr, "\n");
+        len_line = strlen(ptr) - strlen(end);
+        if( (start = strnstr(ptr, penPair, len_line)) != NULL) {
+            c->num_of_paired_points += 2;
+
+            start += strlen(penPair);
+            end = strstr(start, "\""); 
+            end--;
+
+            len_value = strlen(start) - strlen(end);
+            printf("%d\n", len_value);
+            strncpy(value, start, len_value);
+            value[len_value] = '\0';
+            p->pair_num = atoi(value);
+            p->is_paired = true;
+
+            // Point
+            if(strncmp(end, "r", 1) == 0) {
+                p->direct_t = R;
+            }
+            else if(strncmp(end, "l", 1) == 0) {
+                p->direct_t = L;
+            }
+        }
+
+        if( (start = strnstr(ptr, depend_x, len_line)) != NULL) {
+            start += strlen(depend_x);
+            end = strstr(start, "\"");
+
+            len_value = strlen(start) -strlen(end);
+            strncpy(p->depend_x, start, len_value);
+            p->depend_x[len_value] = '\0';
+        }
+
+        if( (start = strnstr(ptr, depend_y, len_line)) != NULL) {
+            start += strlen(depend_y);
+            end = strstr(start, "\"");
+
+            len_value = strlen(start) -strlen(end);
+            strncpy(p->depend_y, start, len_value);
+            p->depend_y[len_value] = '\0';
+        }
+
+        // after 
+        // parse coordinate X
+        memset(value, 0x00, sizeof(value));
 		ptr = strstr(ptr, point_x_prefix);
 		ptr += strlen(point_x_prefix);
         ptr2 = strstr(ptr, "\"");

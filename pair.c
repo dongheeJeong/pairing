@@ -573,6 +573,9 @@ void exception_namu_mok(Contour *c)
 
 void determine_direction_t(Point *a, Point *b, int flag)
 {
+    if(a->direct_t != no && b->direct_t != no)
+        return ;
+
 	switch(flag) {
 		case SIDE_TO_SIDE : 
 		case CROSS_TO_CROSS :
