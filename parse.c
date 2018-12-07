@@ -3,6 +3,9 @@
 #include <unistd.h>
 #include "pair.h"
 
+#define NO_MAP 0
+#define DIRTY 1
+
 char buf[BUFFER_SIZE];
 
 void do_pairing(char *glif_name)
@@ -129,8 +132,8 @@ void init_struct_contour(int num_of_contours, int *points_in_contours)
 
 void init_struct_point(char *buf)
 {
-	int i;
-	char value[6];
+	int i, pair_num_int;
+	char pair_num[6];
 	char *ptr, *ptr2;
 	const char *point_prefix = "<point ";
 	const char *point_x_prefix = "x=\"";
@@ -147,12 +150,13 @@ void init_struct_point(char *buf)
 	enum Point_t point_t;
 
 	int x, y;
-
 	int num_of_points = 0;
+    int pair_convert_map[2][100] = { {0, }, {0, } };
 
 	Contour *c;
 	Point *p;
 
+    // for each all contours in glif
 	for(i = 0, ptr = buf; i < g.num_of_contours; ) {
 		/* parse info of point */
 		ptr = strstr(ptr, point_prefix);
@@ -209,22 +213,40 @@ void init_struct_point(char *buf)
 			p->is_smooth = false;
 
         // 이미 잡혀있는 pair or depend 확인
-        int len_value, len_line;
+        int len_pair_num, len_line;
         char *start, *end;
         end = strstr(ptr, "\n");
         len_line = strlen(ptr) - strlen(end);
+
+        // penpair exist?
         if( (start = strnstr(ptr, penPair, len_line)) != NULL) {
-            c->num_of_paired_points += 2;
+            c->num_of_paired_points += 2; // +2? +1?
 
             start += strlen(penPair);
             end = strstr(start, "\""); 
             end--;
 
-            len_value = strlen(start) - strlen(end);
-            printf("%d\n", len_value);
-            strncpy(value, start, len_value);
-            value[len_value] = '\0';
-            p->pair_num = atoi(value);
+            len_pair_num = strlen(start) - strlen(end);
+            strncpy(pair_num, start, len_pair_num);
+            pair_num[len_pair_num] = '\0';
+
+            // check dirty bit which means looping pair_num between contours
+            pair_num_int = atoi(pair_num);
+            if(pair_convert_map[1][pair_num_int] == DIRTY) {
+                memset(pair_convert_map[0], 0x00, sizeof(pair_convert_map[0]));
+                memset(pair_convert_map[1], 0x00, sizeof(pair_convert_map[1]));
+            }
+
+            // set mapping data
+            if(pair_convert_map[0][pair_num_int] == NO_MAP) {
+                pair_convert_map[0][pair_num_int] = g.pair_num++;
+            } 
+            else {
+                // set dirty bit
+                pair_convert_map[1][pair_num_int] = DIRTY;
+            }
+
+            p->pair_num = pair_convert_map[0][pair_num_int];
             p->is_paired = true;
 
             // Point
@@ -236,44 +258,47 @@ void init_struct_point(char *buf)
             }
         }
 
-        if( (start = strnstr(ptr, depend_x, len_line)) != NULL) {
-            start += strlen(depend_x);
-            end = strstr(start, "\"");
+        // not stop check depends
+        // dependX exist?
+       // if( (start = strnstr(ptr, depend_x, len_line)) != NULL) {
+       //     start += strlen(depend_x);
+       //     end = strstr(start, "\"");
 
-            len_value = strlen(start) -strlen(end);
-            strncpy(p->depend_x, start, len_value);
-            p->depend_x[len_value] = '\0';
-        }
+       //     len_pair_num = strlen(start) -strlen(end);
+       //     strncpy(p->depend_x, start, len_pair_num);
+       //     p->depend_x[len_pair_num] = '\0';
+       // }
 
-        if( (start = strnstr(ptr, depend_y, len_line)) != NULL) {
-            start += strlen(depend_y);
-            end = strstr(start, "\"");
+       // // dependY exist?
+       // if( (start = strnstr(ptr, depend_y, len_line)) != NULL) {
+       //     start += strlen(depend_y);
+       //     end = strstr(start, "\"");
 
-            len_value = strlen(start) -strlen(end);
-            strncpy(p->depend_y, start, len_value);
-            p->depend_y[len_value] = '\0';
-        }
+       //     len_pair_num = strlen(start) -strlen(end);
+       //     strncpy(p->depend_y, start, len_pair_num);
+       //     p->depend_y[len_pair_num] = '\0';
+       // }
 
         // after 
         // parse coordinate X
-        memset(value, 0x00, sizeof(value));
+        memset(pair_num, 0x00, sizeof(pair_num));
 		ptr = strstr(ptr, point_x_prefix);
 		ptr += strlen(point_x_prefix);
         ptr2 = strstr(ptr, "\"");
-        strncpy(value, ptr, strlen(ptr) - strlen(ptr2));
-        value[strlen(ptr)-strlen(ptr2)] = '\0';
+        strncpy(pair_num, ptr, strlen(ptr) - strlen(ptr2));
+        pair_num[strlen(ptr)-strlen(ptr2)] = '\0';
 
-        x = atoi(value);
+        x = atoi(pair_num);
 
         ptr = ptr2;
         ptr = strstr(ptr, point_y_prefix);
         ptr += strlen(point_y_prefix);
 
         ptr2 = strstr(ptr, "\"");
-        strncpy(value, ptr, strlen(ptr) - strlen(ptr2));
-        value[strlen(ptr)-strlen(ptr2)] = '\0';
+        strncpy(pair_num, ptr, strlen(ptr) - strlen(ptr2));
+        pair_num[strlen(ptr)-strlen(ptr2)] = '\0';
 
-        y = atoi(value);
+        y = atoi(pair_num);
 
 		p->x = x;
 		p->y = y;
