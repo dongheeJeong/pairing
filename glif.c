@@ -8,6 +8,7 @@ extern char new_path[256];
 
 const char *contour_start = "<contour>";
 const char *contour_end   = "</contour>";
+const char *point_start   = "<point ";
 
 //const char *penpair_pre   = "penPair=\"z";
 //const char *penpair_post  = "\" ";
@@ -17,9 +18,16 @@ const char *penpair_pre   = "name=\"'penPair':'z";
 const char *penpair_pre2  = "'penPair':'z";
 const char *penpair_post  = "'\" ";
 
+// name="'penPair':'z1l', 'innertype':'fill'"
+const char *innertypeFILL   = "'innerType':'fill";
+const char *innertypeUNFILL = "'innerType':'unfill";
 
 const char *left  = "l";
 const char *right = "r";
+
+// depend
+const char*depend_x = "'dependX':'";
+const char*depend_y = "'dependY':'";
 
 void output_glif_file(char *buf, char *glif_name)
 {
@@ -68,18 +76,26 @@ void output_glif_file(char *buf, char *glif_name)
 				continue;
 			}
 
+            // 이미 존재하는 penPair, depend_x, depend_y를 덮어써야함
+            if( (ptr2 = strstr(line_ptr, point_start)) != NULL) {
+                ptr = ptr2 + strlen(point_start);
+			    strncat(output_buf, line_ptr, strlen(line_ptr) - strlen(ptr));
+            }
+
+			// name="hr00" exist?
 			if((ptr2 = strstr(line_ptr, name_pre)) != NULL) {
 				ptr2 += strlen(name_pre);
-				ptr = ptr2;
+                strncat(output_buf, name_pre, strlen(name_pre));
 			}
 
 			p = c->points[cnt_point];
-			strncat(output_buf, line_ptr, strlen(line_ptr) - strlen(ptr));
 
+			// 'penPair':'z1r'
 			if(ptr2 == NULL)
 				strncat(output_buf, penpair_pre, strlen(penpair_pre));
 			else
 				strncat(output_buf, penpair_pre2, strlen(penpair_pre2));
+
 			if(p->direct_t == R)
 				direction = 'r';
 			else if(p->direct_t == L)
@@ -90,11 +106,44 @@ void output_glif_file(char *buf, char *glif_name)
 			sprintf(pair, "%d%c", p->pair_num, direction);
 			strncat(output_buf, pair, strlen(pair));
 
+			// 'innertype':'fill'
+			if(cnt_point == 0) {
+				strncat(output_buf, "', ", 3);
+				if(c->contour_t == child) 
+					strncat(output_buf, innertypeUNFILL, strlen(innertypeUNFILL));
+				else
+					strncat(output_buf, innertypeFILL, strlen(innertypeFILL));
+			}
+
+            // write depend_x
+            if(strlen(p->depend_x) != 0) {
+                strncat(output_buf, "', ", 3);
+                strncat(output_buf, depend_x, strlen(depend_x));
+                strncat(output_buf, p->depend_x, strlen(p->depend_x));
+            }
+
+            // write depend_y
+            if(strlen(p->depend_y) != 0) {
+                strncat(output_buf, "', ", 3);
+                strncat(output_buf, depend_y, strlen(depend_y));
+                strncat(output_buf, p->depend_y, strlen(p->depend_y));
+            }
+
+			// name="hr00" exist
 			if(ptr2 == NULL)
 				strncat(output_buf, penpair_post, strlen(penpair_post));
 
-			if(ptr2 != NULL)
+			// not exist
+			if(ptr2 != NULL) {
 				strncat(output_buf, "', ", 3);
+                strncat(output_buf, ptr2, 4);
+                strncat(output_buf, "\" ", 2);
+            }
+
+            if( (ptr = strstr(line_ptr, "smooth")) == NULL) {
+                ptr = strstr(line_ptr, "type");
+            }
+
 			strncat(output_buf, ptr, strlen(ptr));
 			output_buf[strlen(output_buf)] = '\n';
 			cnt_point++;
