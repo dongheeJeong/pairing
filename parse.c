@@ -232,23 +232,30 @@ void init_struct_point(char *buf)
 
             // check dirty bit which means looping pair_num between contours
             pair_num_int = atoi(pair_num);
-            if(pair_convert_map[1][pair_num_int] == DIRTY) {
-                memset(pair_convert_map[0], 0x00, sizeof(pair_convert_map[0]));
-                memset(pair_convert_map[1], 0x00, sizeof(pair_convert_map[1]));
-            }
 
-            // set mapping data
-            if(pair_convert_map[0][pair_num_int] == NO_MAP) {
-                pair_convert_map[0][pair_num_int] = g.pair_num++;
-            } 
+            if(pair_num_int == 99 || pair_num_int == 98) {
+                p->pair_num = pair_num_int;
+            }
             else {
-                // set dirty bit
-                pair_convert_map[1][pair_num_int] = DIRTY;
+                // is dirty bit set? -> 똑같은 pair num 사용
+                if(pair_convert_map[1][pair_num_int] == DIRTY) {
+                    memset(pair_convert_map[0], 0x00, sizeof(pair_convert_map[0]));
+                    memset(pair_convert_map[1], 0x00, sizeof(pair_convert_map[1]));
+                }
+
+                // set mapping data
+                if(pair_convert_map[0][pair_num_int] == NO_MAP) {
+                    pair_convert_map[0][pair_num_int] = g.pair_num++;
+                } 
+                else {
+                    // set dirty bit
+                    pair_convert_map[1][pair_num_int] = DIRTY;
+                }
+
+                p->pair_num = pair_convert_map[0][pair_num_int];
             }
 
-            p->pair_num = pair_convert_map[0][pair_num_int];
             p->is_paired = true;
-
             // Point
             if(strncmp(end, "r", 1) == 0) {
                 p->direct_t = R;
@@ -258,7 +265,7 @@ void init_struct_point(char *buf)
             }
         }
 
-        // not stop check depends
+        // now stop check depends
         // dependX exist?
        // if( (start = strnstr(ptr, depend_x, len_line)) != NULL) {
        //     start += strlen(depend_x);
@@ -281,6 +288,7 @@ void init_struct_point(char *buf)
 
         // after 
         // parse coordinate X
+        // reuse pair_num as buffer
         memset(pair_num, 0x00, sizeof(pair_num));
 		ptr = strstr(ptr, point_x_prefix);
 		ptr += strlen(point_x_prefix);
