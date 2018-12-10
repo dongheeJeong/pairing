@@ -21,7 +21,8 @@ int main(int argc, char *argv[])
 	}
 
 	realpath(argv[1], cwd_path);
-	make_dir();
+    // do not make new directory, just overwrite glif file
+	//make_dir();
 
 	if((dirp = opendir(cwd_path)) == NULL) {
 		fprintf(stderr, "wrong input path\n");

@@ -265,30 +265,29 @@ void init_struct_point(char *buf)
             }
         }
 
-        // now stop check depends
         // dependX exist?
-       // if( (start = strnstr(ptr, depend_x, len_line)) != NULL) {
-       //     start += strlen(depend_x);
-       //     end = strstr(start, "\"");
+       if( (start = strnstr(ptr, depend_x, len_line)) != NULL) {
+           start += strlen(depend_x);
+           end = strstr(start, "\"");
 
-       //     len_pair_num = strlen(start) -strlen(end);
-       //     strncpy(p->depend_x, start, len_pair_num);
-       //     p->depend_x[len_pair_num] = '\0';
-       // }
+           len_pair_num = strlen(start) -strlen(end);
+           strncpy(p->depend_x, start, len_pair_num);
+           p->depend_x[len_pair_num] = '\0';
+       }
 
-       // // dependY exist?
-       // if( (start = strnstr(ptr, depend_y, len_line)) != NULL) {
-       //     start += strlen(depend_y);
-       //     end = strstr(start, "\"");
+       // dependY exist?
+       if( (start = strnstr(ptr, depend_y, len_line)) != NULL) {
+           start += strlen(depend_y);
+           end = strstr(start, "\"");
 
-       //     len_pair_num = strlen(start) -strlen(end);
-       //     strncpy(p->depend_y, start, len_pair_num);
-       //     p->depend_y[len_pair_num] = '\0';
-       // }
+           len_pair_num = strlen(start) -strlen(end);
+           strncpy(p->depend_y, start, len_pair_num);
+           p->depend_y[len_pair_num] = '\0';
+       }
 
-        // after 
-        // parse coordinate X
-        // reuse pair_num as buffer
+        //after 
+        //parse coordinate X
+        //reuse pair_num as buffer
         memset(pair_num, 0x00, sizeof(pair_num));
 		ptr = strstr(ptr, point_x_prefix);
 		ptr += strlen(point_x_prefix);

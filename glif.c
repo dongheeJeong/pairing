@@ -19,8 +19,8 @@ const char *penpair_pre2  = "'penPair':'z";
 const char *penpair_post  = "'\" ";
 
 // name="'penPair':'z1l', 'innertype':'fill'"
-const char *innertypeFILL   = "'innerType':'fill";
-const char *innertypeUNFILL = "'innerType':'unfill";
+const char *innertypeFILL   = "'innerType':'fill'";
+const char *innertypeUNFILL = "'innerType':'unfill'";
 
 const char *left  = "l";
 const char *right = "r";
@@ -59,16 +59,7 @@ void output_glif_file(char *buf, char *glif_name)
 
 		// for all of points
 		for(cnt_point = 0; cnt_point < c->num_of_points; ) {
-			// if already name is exist, continue;
-			/*
-			if((ptr = strstr(line_ptr, "name")) != NULL) {
-				strncat(output_buf, line_ptr, strlen(line_ptr));
-				output_buf[strlen(output_buf)] = '\n';
-				line_ptr = line_buf[++i];
-				cnt_point++;
-				continue;
-			}
-			*/
+
 			if((ptr = strstr(line_ptr, "type")) == NULL) {
 				strncat(output_buf, line_ptr, strlen(line_ptr));
 				output_buf[strlen(output_buf)] = '\n';
@@ -86,15 +77,30 @@ void output_glif_file(char *buf, char *glif_name)
 			if((ptr2 = strstr(line_ptr, name_pre)) != NULL) {
 				ptr2 += strlen(name_pre);
                 strncat(output_buf, name_pre, strlen(name_pre));
+
+                // now, ptr2 == close '"'
+                ptr2 = strstr(ptr2, "\"");
 			}
 
 			p = c->points[cnt_point];
 
 			// 'penPair':'z1r'
-			if(ptr2 == NULL)
+			if(ptr2 == NULL) {
+                // pair_num이 -1이라면(잡히지 않은경우) 파일 출력 x
+                if(p->pair_num == -1) {
+                    strncat(output_buf, "name=\"", 6);
+                    goto NO_PAIR_NUM;
+                }
+                else {
+			        strncat(output_buf, penpair_pre, strlen(penpair_pre));
+                }
+                // 이 줄 위로 7줄 주석 처리 후, 이 줄 바로 밑줄의 주석을 풀면 -1도 penPair 적용됨
+                // 추가로 118번 라인 조건문만 주석을 걸어주면됨 ( pair_num이 -1인지 확인하지 않도록)
 				strncat(output_buf, penpair_pre, strlen(penpair_pre));
-			else
+            }
+			else {
 				strncat(output_buf, penpair_pre2, strlen(penpair_pre2));
+            }
 
 			if(p->direct_t == R)
 				direction = 'r';
@@ -103,12 +109,14 @@ void output_glif_file(char *buf, char *glif_name)
 			else 
 				direction = '?';
 
-			sprintf(pair, "%d%c", p->pair_num, direction);
-			strncat(output_buf, pair, strlen(pair));
+            sprintf(pair, "%d%c", p->pair_num, direction);
+            strncat(output_buf, pair, strlen(pair));
 
+NO_PAIR_NUM:
 			// 'innertype':'fill'
 			if(cnt_point == 0) {
-				strncat(output_buf, "', ", 3);
+                if(p->pair_num != -1)
+				    strncat(output_buf, "', ", 3);
 				if(c->contour_t == child) 
 					strncat(output_buf, innertypeUNFILL, strlen(innertypeUNFILL));
 				else
@@ -117,27 +125,28 @@ void output_glif_file(char *buf, char *glif_name)
 
             // write depend_x
             if(strlen(p->depend_x) != 0) {
-                strncat(output_buf, "', ", 3);
+                strncat(output_buf, ", ", 2);
                 strncat(output_buf, depend_x, strlen(depend_x));
                 strncat(output_buf, p->depend_x, strlen(p->depend_x));
+                strncat(output_buf, "'", 1);
             }
 
             // write depend_y
             if(strlen(p->depend_y) != 0) {
-                strncat(output_buf, "', ", 3);
+                strncat(output_buf, ", ", 2);
                 strncat(output_buf, depend_y, strlen(depend_y));
                 strncat(output_buf, p->depend_y, strlen(p->depend_y));
+                strncat(output_buf, "'", 1);
+            }
+
+			// not exist
+			if(ptr2 == NULL) {
+				strncat(output_buf, "\" ", 2);
             }
 
 			// name="hr00" exist
-			if(ptr2 == NULL)
-				strncat(output_buf, penpair_post, strlen(penpair_post));
-
-			// not exist
 			if(ptr2 != NULL) {
-				strncat(output_buf, "', ", 3);
-                strncat(output_buf, ptr2, 4);
-                strncat(output_buf, "\" ", 2);
+                strncat(output_buf, ptr2, 2);
             }
 
             if( (ptr = strstr(line_ptr, "smooth")) == NULL) {
@@ -194,7 +203,8 @@ void write_file(char *output_buf, char *glif_name)
 {
 	int fd;
 
-	chdir(new_path);
+    // do not make new directory, just overwrite glif file
+	// chdir(new_path);
 	fd = open(glif_name, O_RDWR|O_CREAT|O_TRUNC, 0644);
 	if(fd < 0) {
 		fprintf(stderr, "glif.c : open error for %s\n", glif_name);
