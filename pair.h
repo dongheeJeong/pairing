@@ -12,7 +12,7 @@
 //#define PRINT_glif
 //#define PRINT_namu_mok
 
-#define BUFFER_SIZE 4096*4
+#define BUFFER_SIZE 4096*5
 #define LINE_SIZE 512
 #define CONTOUR_SIZE 30
 #define CHILD_NUM 10
