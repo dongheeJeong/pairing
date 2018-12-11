@@ -422,8 +422,8 @@ NEXT_CHILD:	;
 			else
 				c2 = child_not_filtered[j];
 
+            // only case of cid3946
             if(c2->contour_t == parent) {
-                printf("parent be child !\n");
                 for(int i = 0; i < c2->num_of_childs; i++) {
                     c2->child[i]->contour_t = alone;
                     c2->child[i]->has_parent = false;
