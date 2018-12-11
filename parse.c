@@ -422,6 +422,16 @@ NEXT_CHILD:	;
 			else
 				c2 = child_not_filtered[j];
 
+            if(c2->contour_t == parent) {
+                printf("parent be child !\n");
+                for(int i = 0; i < c2->num_of_childs; i++) {
+                    c2->child[i]->contour_t = alone;
+                    c2->child[i]->has_parent = false;
+                    c2->child[i] = NULL;
+                }
+                c2->num_of_childs = 0;
+            }
+
 			c2->contour_t = child;
 			c1->contour_t = parent;
 
