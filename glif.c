@@ -85,21 +85,39 @@ void output_glif_file(char *buf, char *glif_name)
 			p = c->points[cnt_point];
 
 			// 'penPair':'z1r'
-			if(ptr2 == NULL) {
-                // pair_num이 -1이라면(잡히지 않은경우) 파일 출력 x
+			//if(ptr2 == NULL) {
+            //    // pair_num이 -1이라면(잡히지 않은경우) 파일 출력 x
+            //    if(p->pair_num == -1) {
+            //        strncat(output_buf, "name=\"", 6);
+            //        goto NO_PAIR_NUM;
+            //    }
+            //    else {
+			//        strncat(output_buf, penpair_pre, strlen(penpair_pre));
+            //    }
+            //    // 이 줄 위로 7줄 주석 처리 후, 이 줄 바로 밑줄의 주석을 풀면 -1도 penPair 적용됨
+            //    // 추가로 118번 라인 조건문만 주석을 걸어주면됨 ( pair_num이 -1인지 확인하지 않도록)
+			//	//strncat(output_buf, penpair_pre, strlen(penpair_pre));
+            //}
+			//else {
+			//	strncat(output_buf, penpair_pre2, strlen(penpair_pre2));
+            //}
+
+            if(ptr2 == NULL) {
                 if(p->pair_num == -1) {
                     strncat(output_buf, "name=\"", 6);
                     goto NO_PAIR_NUM;
                 }
                 else {
-			        strncat(output_buf, penpair_pre, strlen(penpair_pre));
+                    strncat(output_buf, penpair_pre, strlen(penpair_pre));
                 }
-                // 이 줄 위로 7줄 주석 처리 후, 이 줄 바로 밑줄의 주석을 풀면 -1도 penPair 적용됨
-                // 추가로 118번 라인 조건문만 주석을 걸어주면됨 ( pair_num이 -1인지 확인하지 않도록)
-				//strncat(output_buf, penpair_pre, strlen(penpair_pre));
-            }
-			else {
-				strncat(output_buf, penpair_pre2, strlen(penpair_pre2));
+            } 
+            else {
+                if(p->pair_num == -1) {
+                    goto NO_PAIR_NUM;
+                }
+                else {
+                    strncat(output_buf, penpair_pre2, strlen(penpair_pre2));
+                }
             }
 
 			if(p->direct_t == R)
